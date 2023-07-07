@@ -6,8 +6,8 @@ using UnityEngine;
 public class MageMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-
     private Rigidbody2D rb;
+    
 
     private void Start()
     {
