@@ -13,7 +13,11 @@ public class Monster : MonoBehaviour
         {
             print("I have been killed");
             Destroy(gameObject);
-            SpellManager.Instance.DropSpell(transform.position);
+
+            if (!isEnemyFour)
+            {
+                SpellManager.Instance.DropSpell(transform.position);
+            }
         }
         if (isEnemyFour)
         {

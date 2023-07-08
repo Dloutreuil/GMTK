@@ -8,7 +8,7 @@ public class MageBehaviour : MonoBehaviour
     public float blinkDuration = 1f; // Duration of the blink effect in seconds
     public float blinkInterval = 0.1f; // Interval between each blink in seconds
     private bool canTakeDamage = true; // Flag indicating if damage can be taken
-    private Renderer characterRenderer; // Reference to the character's renderer component
+    private Renderer characterRenderer; // Reference to the character's renderer components
 
     private void Start()
     {
