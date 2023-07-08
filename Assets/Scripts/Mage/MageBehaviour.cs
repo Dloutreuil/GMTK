@@ -49,6 +49,8 @@ public class MageBehaviour : MonoBehaviour
             //game lose
             Debug.LogWarning("Game Lost");
         }
+
+        UiManager.Instance.UpdateHealth(health);
     }
 
     private IEnumerator BlinkCharacter()

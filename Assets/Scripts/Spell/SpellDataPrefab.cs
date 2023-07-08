@@ -12,6 +12,7 @@ public class SpellDataPrefab : MonoBehaviour
         {
             SpellHolder spellHolder = other.GetComponent<SpellHolder>();
             spellHolder.spell = spellToSpawn;
+            UiManager.Instance.UpdateSpell(spellToSpawn.spellSprite);
             Destroy(gameObject);
         }
     }

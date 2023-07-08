@@ -17,8 +17,8 @@ public class PaladinSwordReset : MonoBehaviour
         if (other.CompareTag("Mage"))
         {
             paladinBehaviour.canThrow = true;
-            Destroy(gameObject);
         }
     }
+
 
 }
