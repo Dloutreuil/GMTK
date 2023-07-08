@@ -14,6 +14,12 @@ public class Sword : MonoBehaviour
         swordSpeed = swordspeed;
     }
 
+    private void Start()
+    {
+        canKill = true;
+        canMove = true;
+    }
+
     private void Update()
     {
         if (canMove)

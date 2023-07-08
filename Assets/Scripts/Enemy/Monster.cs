@@ -5,7 +5,8 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public bool canTakeDamage = true;
-
+    public bool isEnemyFour = false;
+    [HideInInspector] public GameObject enemyToSpawn;
     public void Kill()
     {
         if (canTakeDamage)
@@ -14,5 +15,14 @@ public class Monster : MonoBehaviour
             Destroy(gameObject);
             SpellManager.Instance.DropSpell(transform.position);
         }
+        if (isEnemyFour)
+        {
+            SpawnEnemy();
+        }
+    }
+
+    public void SpawnEnemy()
+    {
+        Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
     }
 }

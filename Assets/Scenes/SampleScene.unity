@@ -254,22 +254,26 @@ MonoBehaviour:
   enemyPrefabs:
   - prefab: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
       type: 3}
-    spawnRate: 25
-    cooldown: 2
+    spawnRate: 0.25
+    cooldown: 6
     lastSpawnTime: 0
+    isSpawning: 0
   - prefab: {fileID: 193181414042425136, guid: ef3e7f8a69c708a4380bea66ab4033e1, type: 3}
-    spawnRate: 25
-    cooldown: 17
+    spawnRate: 0.25
+    cooldown: 3
     lastSpawnTime: 0
+    isSpawning: 0
   - prefab: {fileID: 692453880993537935, guid: 7583a24c20b215c45b13cd0aee49413d, type: 3}
-    spawnRate: 25
-    cooldown: 14
+    spawnRate: 0.25
+    cooldown: 8
     lastSpawnTime: 0
+    isSpawning: 0
   - prefab: {fileID: 8806455228294197430, guid: ecb6f5bbfaa965d4fbf64a549a1f26b8,
       type: 3}
-    spawnRate: 25
-    cooldown: 20
+    spawnRate: 0.25
+    cooldown: 5
     lastSpawnTime: 0
+    isSpawning: 0
   spawnerCooldown: 2
 --- !u!114 &86508484
 MonoBehaviour:

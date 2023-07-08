@@ -22,6 +22,7 @@ public class EnemyFour : MonoBehaviour
 
     private IEnumerator Start()
     {
+        monsterScript.enemyToSpawn = enemyToSpawn;
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
         navMeshAgent.speed = enemyStats.speed;
         navMeshAgent.updateRotation = false;
@@ -53,6 +54,5 @@ public class EnemyFour : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(enemyToSpawn, transform.position, Quaternion.identity); 
     }
 }
