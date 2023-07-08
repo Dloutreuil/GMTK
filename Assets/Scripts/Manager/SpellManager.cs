@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpawnableSpellData
 {
     public GameObject spellPrefab;
-    public float dropRate = 0.5f;
+    [Min(0)] public float dropRate = 0.5f;
     public float destroyCooldown = 5f;
     public int maximumSpawned = 3;
 }
@@ -14,7 +14,7 @@ public class SpawnableSpellData
 public class SpellManager : MonoBehaviour
 {
     public List<SpawnableSpellData> spawnableSpells = new List<SpawnableSpellData>();
-
+    public float nullSpellChance = 0.1f;
     private Dictionary<GameObject, SpawnableSpellData> spellDataMap = new Dictionary<GameObject, SpawnableSpellData>();
     private Dictionary<GameObject, int> spawnedSpellCount = new Dictionary<GameObject, int>();
 
@@ -44,6 +44,12 @@ public class SpellManager : MonoBehaviour
 
     public void DropSpell(Vector3 positionToSpawn)
     {
+        // Determine if a null spell should be returned
+        if (UnityEngine.Random.value <= nullSpellChance)
+        {
+            return;
+        }
+
         // Randomly select a spell to spawn based on drop rates
         GameObject spellToSpawn = SelectRandomSpell();
         if (spellToSpawn == null)
@@ -134,6 +140,85 @@ public class SpellManager : MonoBehaviour
         {
             spawnedSpellCount[spellData.spellPrefab]--;
         }
+    }
+
+    private void OnValidate()
+    {
+        /*
+         // Ensure total drop rates add up to 1 (100%)
+         float totalDropRates = 0f;
+         foreach (SpawnableSpellData spellData in spawnableSpells)
+         {
+             totalDropRates += spellData.dropRate;
+         }
+
+         // Add nullSpellChance to the total drop rates
+         totalDropRates += nullSpellChance;
+
+         // Adjust drop rates if the total doesn't equal 1
+         if (totalDropRates != 1f)
+         {
+             float scale = 1f / totalDropRates;
+             foreach (SpawnableSpellData spellData in spawnableSpells)
+             {
+                 spellData.dropRate *= scale;
+             }
+             nullSpellChance *= scale;
+         }
+
+         // Ensure nullSpellChance is within the valid range
+         nullSpellChance = Mathf.Clamp01(nullSpellChance);*/
+
+        // Calculate total drop rates without nullSpellChance
+        float totalDropRates = 0f;
+        foreach (SpawnableSpellData spellData in spawnableSpells)
+        {
+            totalDropRates += spellData.dropRate;
+        }
+
+        // Calculate the remaining drop rate to reach 1
+        float remainingDropRate = 1f - totalDropRates;
+
+        // Adjust nullSpellChance if remainingDropRate is positive
+        if (remainingDropRate > 0f)
+        {
+            nullSpellChance = Mathf.Clamp01(remainingDropRate);
+        }
+        else
+        {
+            nullSpellChance = 0f;
+        }
+
+        // Ensure nullSpellChance is within the valid range
+        nullSpellChance = Mathf.Clamp01(nullSpellChance);
+
+    }
+
+    private void OnEnable()
+    {
+        // Calculate total drop rates without nullSpellChance
+        float totalDropRates = 0f;
+        foreach (SpawnableSpellData spellData in spawnableSpells)
+        {
+            totalDropRates += spellData.dropRate;
+        }
+
+        // Calculate the remaining drop rate to reach 1
+        float remainingDropRate = 1f - totalDropRates;
+
+        // Adjust nullSpellChance if remainingDropRate is positive
+        if (remainingDropRate > 0f)
+        {
+            nullSpellChance = Mathf.Clamp01(remainingDropRate);
+        }
+        else
+        {
+            nullSpellChance = 0f;
+        }
+
+        // Ensure nullSpellChance is within the valid range
+        nullSpellChance = Mathf.Clamp01(nullSpellChance);
+
     }
 
 }
