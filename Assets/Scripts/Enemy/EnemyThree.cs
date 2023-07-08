@@ -13,6 +13,7 @@ public class EnemyThree : MonoBehaviour
     public float toggleDelay = 3f;
     private bool canMove = false;
 
+    private Color savedColor;
     private void Awake()
     {
         monsterScript = GetComponent<Monster>();
@@ -61,9 +62,17 @@ public class EnemyThree : MonoBehaviour
         {
             yield return new WaitForSeconds(toggleDelay);
             if (monsterScript.canTakeDamage)
+            {
+                Renderer spriteRenderer = gameObject.GetComponentInChildren<Renderer>();
+                savedColor = spriteRenderer.material.color;
+                spriteRenderer.material.color = new Color(1f, 1f, 1f, 0.5f);
                 monsterScript.canTakeDamage = false;
+
+            }
             else
             {
+                Renderer spriteRenderer = gameObject.GetComponentInChildren<Renderer>();
+                spriteRenderer.material.color = savedColor;
                 monsterScript.canTakeDamage = true;
 
             }

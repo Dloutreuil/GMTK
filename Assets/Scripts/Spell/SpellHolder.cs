@@ -23,7 +23,6 @@ public class SpellHolder : MonoBehaviour
     {
         if (spell != null)
         {
-
             switch (state)
             {
                 case SpellState.ready:

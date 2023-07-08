@@ -7,7 +7,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private float swordSpeed = 5f;
     [SerializeField] private bool canMove = true;
     [SerializeField] private bool canKill = true;
-
+    [HideInInspector] public bool moveTowardsMage = false;
     public void SetTarget(Vector3 target, float swordspeed)
     {
         this.target = target;
@@ -29,6 +29,19 @@ public class Sword : MonoBehaviour
                 canKill = false;
             }
         }
+        if (moveTowardsMage)
+        {
+            canMove = false;
+            Vector3 wantedTarget = FindObjectOfType<MageBehaviour>().gameObject.transform.position;
+            canKill = true;
+            canMove = false;
+
+            Vector3 direction = wantedTarget - transform.position;
+            transform.Translate(direction.normalized * swordSpeed * Time.deltaTime, Space.World);
+
+            // Check if the sword is close to the target
+            float distanceToTarget = Vector3.Distance(transform.position, target);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,15 +51,11 @@ public class Sword : MonoBehaviour
             Monster monster = other.GetComponent<Monster>();
             if (monster != null)
             {
-                monster.Kill();
-                canKill = false;
-                canMove = false;
                 if (monster.canTakeDamage)
                 {
-                    monster.Kill();
                     canKill = false;
                     canMove = false;
-                    Debug.Log("killing enemy");
+                    monster.Kill();
                 }
             }
         }
