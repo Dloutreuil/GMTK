@@ -91,7 +91,7 @@ public class EnemyTwo : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, currentTargetPosition) <= 0.1f)
         {
-            navMeshAgent.SetDestination(null);
+            navMeshAgent.SetDestination(Vector3.zero);
         }
     }
 
