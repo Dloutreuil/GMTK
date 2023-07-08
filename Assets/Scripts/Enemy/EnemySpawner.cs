@@ -101,7 +101,7 @@ public class EnemySpawner : MonoBehaviour
     {
         enemyPrefab.isSpawning = true;
 
-        int maxAttempts = 20;
+        int maxAttempts = 7;
         int attempts = 0;
 
         while (attempts < maxAttempts)
