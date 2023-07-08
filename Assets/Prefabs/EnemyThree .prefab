@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 692453880993537920}
   - component: {fileID: 692453880993537925}
-  - component: {fileID: 692453880993537924}
   - component: {fileID: 692453880993537923}
   - component: {fileID: 692453880993537922}
   - component: {fileID: 692453880993537921}
   - component: {fileID: 2126068862}
+  - component: {fileID: 6052351194734100808}
   m_Layer: 0
   m_Name: 'EnemyThree '
   m_TagString: Enemy
@@ -89,22 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &692453880993537924
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692453880993537935}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!195 &692453880993537923
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -115,7 +99,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8.494654e+10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -139,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca5c2acad49f1440b191dcdb290c93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStats: {fileID: 11400000, guid: 053591cf886d4c44da2921aabedbb214, type: 2}
+  enemyStats: {fileID: 11400000, guid: fbc8e1da745bd7643bb21e04cdc495c8, type: 2}
   toggleDelay: 3
 --- !u!114 &692453880993537921
 MonoBehaviour:
@@ -177,3 +161,66 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6052351194734100808
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692453880993537935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.26, y: -0.11}
+      - {x: 0.22, y: 0.21}
+      - {x: 0.22, y: 0.22}
+      - {x: 0.14, y: 0.22}
+      - {x: 0.08, y: 0.19999999}
+      - {x: -0.22999999, y: 0.19}
+      - {x: -0.39999998, y: 0.22}
+      - {x: -0.52, y: 0.22}
+      - {x: -0.53, y: 0.07}
+      - {x: -0.44, y: -0.04}
+      - {x: -0.42999998, y: -0.22999999}
+      - {x: -0.5, y: -0.35999998}
+      - {x: -0.59, y: -0.35999998}
+      - {x: -0.65, y: -0.42999998}
+      - {x: -0.68, y: -0.59}
+      - {x: -0.68, y: -0.71999997}
+      - {x: -0.66999996, y: -0.78999996}
+      - {x: -0.59, y: -0.89}
+      - {x: -0.5, y: -0.96}
+      - {x: -0.37, y: -0.96}
+      - {x: -0.28, y: -1}
+      - {x: 0.06, y: -1}
+      - {x: 0.17999999, y: -0.83}
+      - {x: 0.25, y: -0.65999997}
+      - {x: 0.26, y: -0.39999998}
+    - - {x: -0.53, y: -0.71999997}
+      - {x: -0.55, y: -0.7}
+      - {x: -0.55, y: -0.66999996}
+      - {x: -0.53999996, y: -0.66999996}
+      - {x: -0.51, y: -0.64}
+      - {x: -0.51, y: -0.63}
+      - {x: -0.48, y: -0.63}
+      - {x: -0.45999998, y: -0.61}
+      - {x: -0.48999998, y: -0.64}
+      - {x: -0.53, y: -0.71999997}
+      - {x: -0.53, y: -0.74}
+      - {x: -0.53999996, y: -0.75}
+      - {x: -0.53, y: -0.75}

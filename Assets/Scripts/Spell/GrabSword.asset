@@ -16,4 +16,4 @@ MonoBehaviour:
   cooldownTime: 0
   activeTime: 1
   target: {fileID: 0}
-  attractionForce: 20
+  attractionForce: 10000

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 193181414042425133}
   - component: {fileID: 193181414042425134}
   - component: {fileID: 193181414042425132}
-  - component: {fileID: 193181414042425131}
   - component: {fileID: 193181414042425130}
   - component: {fileID: 193181414042425129}
   - component: {fileID: 1739336023}
+  - component: {fileID: 9085266158298002990}
   m_Layer: 0
   m_Name: EnemyTwo
   m_TagString: Enemy
@@ -101,28 +101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535ebb766af61664baca35d223a2722a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStats: {fileID: 11400000, guid: 053591cf886d4c44da2921aabedbb214, type: 2}
+  enemyStats: {fileID: 11400000, guid: a85e11b8b682e91448058469e184847d, type: 2}
   projectilePrefab: {fileID: 4502108634279510947, guid: a6250e066b604dc41992b8b7cb2106df,
     type: 3}
   navMeshAgent: {fileID: 193181414042425130}
   instantiationDelay: 3
   movementRadius: 5
---- !u!58 &193181414042425131
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193181414042425136}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!195 &193181414042425130
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -133,7 +117,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8.494654e+10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -181,3 +165,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &9085266158298002990
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193181414042425136}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.45999998, y: -0.37}
+      - {x: 0.42999998, y: -0.32999998}
+      - {x: 0.31, y: -0.32999998}
+      - {x: 0.22999999, y: -0.41}
+      - {x: 0.24, y: -0.17}
+      - {x: 0.17999999, y: -0.089999996}
+      - {x: 0.26, y: 0.21}
+      - {x: 0.099999994, y: 0.38}
+      - {x: -0.02, y: 0.5}
+      - {x: -0.17999999, y: 0.5}
+      - {x: -0.26, y: 0.48}
+      - {x: -0.42, y: 0.22999999}
+      - {x: -0.52, y: 0.25}
+      - {x: -0.52, y: 0.06}
+      - {x: -0.39, y: -0.11}
+      - {x: -0.41, y: -0.24}
+      - {x: -0.45999998, y: -0.53}
+      - {x: -0.39999998, y: -0.74}
+      - {x: -0.26999998, y: -0.7}
+      - {x: -0.29999998, y: -0.97999996}
+      - {x: -0.25, y: -1}
+      - {x: 0.04, y: -1}
+      - {x: 0.089999996, y: -0.97999996}
+      - {x: 0.19999999, y: -0.71999997}
+      - {x: 0.45999998, y: -0.51}
