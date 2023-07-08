@@ -36,11 +36,15 @@ public class Sword : MonoBehaviour
         if (other.CompareTag("Enemy") && canKill)
         {
             Monster monster = other.GetComponent<Monster>();
-            if (monster != null) 
+            if (monster != null)
             {
                 monster.Kill();
+                canKill = false;
+                canMove = false;
                 if (monster.canTakeDamage)
                 {
+                    monster.Kill();
+                    canKill = false;
                     canMove = false;
                     Debug.Log("killing enemy");
                 }
@@ -49,6 +53,7 @@ public class Sword : MonoBehaviour
         if (other.CompareTag("Mage"))
         {
             canMove = false;
+            canKill = false;
             MageMovement mageMovement = other.GetComponent<MageMovement>();
             transform.SetParent(mageMovement.transform);
         }

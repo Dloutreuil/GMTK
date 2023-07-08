@@ -11,17 +11,19 @@ public class GrabSwordSpell : Spell
 
     private void OnEnable()
     {
-        target = FindObjectOfType<MageMovement>().gameObject;
+        target = FindAnyObjectByType<MageMovement>().gameObject;
     }
+
     public override void Activate(GameObject parent)
     {
-        Sword sword = FindAnyObjectByType<Sword>();
-
-        Rigidbody2D parentRigidbody = sword.gameObject.GetComponent<Rigidbody2D>();
+        target = FindAnyObjectByType<MageMovement>().gameObject;
+        Debug.Log(target.name);
+        Sword sword = FindObjectOfType<Sword>();
+        Rigidbody2D parentRigidbody = sword.GetComponent<Rigidbody2D>();
         if (parentRigidbody != null && target != null)
         {
-            Vector2 attractionDirection = target.transform.position - parent.transform.position;
-            parentRigidbody.AddForce(attractionDirection * attractionForce);
+            Vector2 attractionDirection = target.transform.position - sword.transform.position;
+            parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
         }
     }
 
