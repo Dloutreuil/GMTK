@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Heal
   cooldownTime: 0
   activeTime: 1
-  healAmount: 10
+  healAmount: 1

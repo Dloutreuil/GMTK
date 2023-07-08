@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b32eafacf54ffa1468ef571d5b9b3cc5, type: 3}
-  m_Name: Kickback
+  m_Script: {fileID: 11500000, guid: 2c847f99bc0aaa24c8bdb86f7a69c402, type: 3}
+  m_Name: Enemy4
   m_EditorClassIdentifier: 
-  name: Kickback
-  cooldownTime: 0
-  activeTime: 1
-  knockbackForce: 5
-  knockbackRadius: 15
+  speed: 1
+  health: 100
+  damage: 1
