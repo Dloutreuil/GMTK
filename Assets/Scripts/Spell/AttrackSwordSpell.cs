@@ -15,12 +15,11 @@ public class AttrackSwordSpell : Spell
     }
     public override void Activate(GameObject parent)
     {
-        Sword sword = FindAnyObjectByType<Sword>();
-
-        Rigidbody2D parentRigidbody = parent.GetComponent<Rigidbody2D>();
+        Sword sword = FindObjectOfType<Sword>();
+        Rigidbody2D parentRigidbody = sword.GetComponent<Rigidbody2D>();
         if (parentRigidbody != null && target != null)
         {
-            Vector2 attractionDirection = target.transform.position - parent.transform.position;
+            Vector2 attractionDirection = target.transform.position - sword.transform.position;
             parentRigidbody.AddForce(attractionDirection * attractionForce);
         }
     }
