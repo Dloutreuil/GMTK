@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 193181414042425129}
   - component: {fileID: 1739336023}
   - component: {fileID: 9085266158298002990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyTwo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 193181414042425130}
   instantiationDelay: 3
   movementRadius: 5
+  positionCheckInterval: 3
 --- !u!195 &193181414042425130
 NavMeshAgent:
   m_ObjectHideFlags: 0

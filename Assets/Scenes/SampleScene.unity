@@ -289,12 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5616f9143202043814e3cf175ce3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &288621614 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1675639308946154139, guid: 5bef497e65200974f998d8d042e531a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675639308225482434}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326884425
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,26 +542,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3263248995056696748}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1196320163 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1675639308946154142, guid: 5bef497e65200974f998d8d042e531a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675639308225482434}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1196320169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288621614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd690997b62ea6d4685769759b88f1e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spell: {fileID: 11400000, guid: 65288ef0b6dd9ed49a37c6241df39b87, type: 2}
-  key: 32
 --- !u!1 &1445505747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,16 +1174,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTwo
       objectReference: {fileID: 0}
-    - target: {fileID: 193181414042425136, guid: ef3e7f8a69c708a4380bea66ab4033e1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 193181414042425136, guid: ef3e7f8a69c708a4380bea66ab4033e1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef3e7f8a69c708a4380bea66ab4033e1, type: 3}
 --- !u!1001 &692453880479147000
@@ -1348,71 +1312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1675639307678270237, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1675639307678270240, guid: 5bef497e65200974f998d8d042e531a9,
         type: 3}
       propertyPath: m_Radius
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308657732978, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308657732978, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308657732978, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308657732982, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1196320163}
-    - target: {fileID: 1675639308657732982, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: swordSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308657732982, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: swordPrefab
-      value: 
-      objectReference: {fileID: 3096941858926035338, guid: 958662b52a021334e8f5bc05293acc91,
-        type: 3}
-    - target: {fileID: 1675639308946154140, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308946154140, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308946154141, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308946154141, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675639308946154142, guid: 5bef497e65200974f998d8d042e531a9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8206
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bef497e65200974f998d8d042e531a9, type: 3}
@@ -1483,16 +1386,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyOne
       objectReference: {fileID: 0}
-    - target: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 995baf8d98f0ff54cb369d5d1fb1a22d, type: 3}
 --- !u!1001 &6621714405051390405
@@ -1561,16 +1454,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyFour
-      objectReference: {fileID: 0}
-    - target: {fileID: 8806455228294197430, guid: ecb6f5bbfaa965d4fbf64a549a1f26b8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8806455228294197430, guid: ecb6f5bbfaa965d4fbf64a549a1f26b8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecb6f5bbfaa965d4fbf64a549a1f26b8, type: 3}

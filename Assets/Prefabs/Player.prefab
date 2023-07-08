@@ -81,7 +81,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4
 --- !u!114 &1675639307678270243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,11 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ae387c636c727498c28e12bf750429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordPrefab: {fileID: 4502108634279510947, guid: 958662b52a021334e8f5bc05293acc91,
+  swordPrefab: {fileID: 3096941858926035338, guid: 958662b52a021334e8f5bc05293acc91,
     type: 3}
   target: {fileID: 1675639308946154142}
   instantiationDelay: 3
-  swordSpeed: 5
+  swordSpeed: 10
   canThrow: 1
   amountOfSwordThrown: 0
 --- !u!1 &1675639308946154139
@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 1675639308946154143}
   - component: {fileID: 1675639308946154147}
   - component: {fileID: 1387575423156235271}
+  - component: {fileID: 1196320169}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Mage
@@ -245,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 1675639308946154139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8206, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1675639307515133697}
@@ -320,9 +321,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1675639308946154143
 MonoBehaviour:
@@ -413,3 +414,17 @@ PolygonCollider2D:
       - {x: 0.45, y: -1.0799999}
       - {x: 0.57, y: -0.98999995}
       - {x: 0.59, y: -0.93}
+--- !u!114 &1196320169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675639308946154139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd690997b62ea6d4685769759b88f1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 0}
+  key: 32
