@@ -1,7 +1,8 @@
 {
-    "name": "Spell",
+    "name": "Paladin",
     "rootNamespace": "",
     "references": [
+        "GUID:d590def4f4f17a942bb5504c87604e86",
         "GUID:18955ee40057c05458e00ce7c52f36eb"
     ],
     "includePlatforms": [],

@@ -5,15 +5,26 @@ using UnityEngine;
 [CreateAssetMenu]
 public class DashSpell : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    public float dashVelocity;
+    public override void Activate(GameObject parent)
     {
-        
+        MageMovement mageMovement = parent.GetComponent<MageMovement>();
+        BoxCollider2D collider = parent.GetComponent<BoxCollider2D>();
+
+        collider.enabled = false;
+        mageMovement.moveSpeed = mageMovement.moveSpeed + dashVelocity;
+
+        Debug.Log("dashed");
+    }
+    public override void BeginCooldown(GameObject parent)
+    {
+        MageMovement mageMovement = parent.GetComponent<MageMovement>();
+        BoxCollider2D collider = parent.GetComponent<BoxCollider2D>();
+
+        collider.enabled = false;
+        mageMovement.moveSpeed = mageMovement.moveSpeed - dashVelocity;
+        Debug.Log("undashed");
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

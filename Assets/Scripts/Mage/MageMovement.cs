@@ -7,7 +7,8 @@ public class MageMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
-    
+
+    public Vector2 movement;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class MageMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+         movement = new Vector2(moveHorizontal, moveVertical);
         rb.velocity = movement * moveSpeed;
     }
 }
