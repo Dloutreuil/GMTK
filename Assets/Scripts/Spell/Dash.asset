@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dash
   m_EditorClassIdentifier: 
   name: Dash
+  spellSprite: {fileID: 0}
   cooldownTime: 1
-  activeTime: 0.5
-  dashVelocity: 10
+  activeTime: 0.25
+  dashVelocity: 5

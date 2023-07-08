@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour
             mageBehaviour.TakeDamage(projectileDamage);
             Destroy(gameObject);
         }
-        else if (other.CompareTag("Wall"))
+        if (other.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
