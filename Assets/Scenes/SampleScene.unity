@@ -315,22 +315,22 @@ MonoBehaviour:
   spawnableSpells:
   - spellPrefab: {fileID: 6288629068586714988, guid: 606b2fffeb0de874987f98c6ddd321f6,
       type: 3}
-    dropRate: 20
+    dropRate: 10
     destroyCooldown: 3
     maximumSpawned: 2
   - spellPrefab: {fileID: 6288629068586714988, guid: 43f0a8eb84968574ba776ccbcc115396,
       type: 3}
-    dropRate: 20
+    dropRate: 10
     destroyCooldown: 3
     maximumSpawned: 1
   - spellPrefab: {fileID: 6288629068586714988, guid: 1bac53d75b1f09c47870e20e362713db,
       type: 3}
-    dropRate: 20
+    dropRate: 10
     destroyCooldown: 3
     maximumSpawned: 1
   - spellPrefab: {fileID: 6288629068586714988, guid: bb8486e4dc7ef6347b2ea3b1171b5140,
       type: 3}
-    dropRate: 40
+    dropRate: 10
     destroyCooldown: 3
     maximumSpawned: 1
 --- !u!4 &326884427

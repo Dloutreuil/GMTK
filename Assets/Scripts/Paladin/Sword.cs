@@ -82,4 +82,10 @@ public class Sword : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
+        paladinBehaviour.DestroyedByWall();
+    }
+
 }

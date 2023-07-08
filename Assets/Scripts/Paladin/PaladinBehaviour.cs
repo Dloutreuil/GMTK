@@ -49,7 +49,6 @@ public class PaladinBehaviour : MonoBehaviour
         amountOfSwordThrown++;
 
         Destroy(sword, 30);
-        DestroyedByWall();
     }
 
     public void DestroyedByWall()
