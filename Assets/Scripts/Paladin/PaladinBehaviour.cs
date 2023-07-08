@@ -10,6 +10,8 @@ public class PaladinBehaviour : MonoBehaviour
     public bool canThrow = true;
 
     private float nextInstantiationTime = 0f;
+
+    [SerializeField] public float amountOfSwordThrown = 0;
     private void Update()
     {
         if (canThrow)
@@ -22,6 +24,8 @@ public class PaladinBehaviour : MonoBehaviour
                 nextInstantiationTime = 0;
             }
         }
+        
+
     }
 
     private IEnumerator InstantiateSwordTowardsTarget()
@@ -39,9 +43,19 @@ public class PaladinBehaviour : MonoBehaviour
 
         CapsuleCollider2D collider = sword.GetComponent<CapsuleCollider2D>();
         collider.enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         collider.enabled = true;
 
+        amountOfSwordThrown++;
+    }
 
+    public void DestroyedByWall()
+    {
+        amountOfSwordThrown = 0;
+        canThrow = true;
+        if (amountOfSwordThrown <= 0)
+        {
+            nextInstantiationTime = 0;
+        }
     }
 }

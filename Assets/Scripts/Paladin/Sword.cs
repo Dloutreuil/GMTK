@@ -72,5 +72,14 @@ public class Sword : MonoBehaviour
             paladinSwordReset.paladinBehaviour.canThrow = true;
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Wall"))
+        {
+            Debug.Log("collided w wall");
+            PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
+            paladinBehaviour.DestroyedByWall();
+            Destroy(gameObject);
+        }
     }
+
 }
