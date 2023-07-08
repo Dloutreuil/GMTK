@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Monster))]
 public class EnemyFour : MonoBehaviour
 {
     public EnemyStats enemyStats;
     private Monster monsterScript;
-    
+    public NavMeshAgent navMeshAgent;
+
     private Transform mageTransform;
 
     public GameObject enemyToSpawn;
@@ -20,12 +22,18 @@ public class EnemyFour : MonoBehaviour
     private void Start()
     {
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
+        navMeshAgent.speed = enemyStats.speed;
     }
 
     private void Update()
     {
-        Vector2 direction = mageTransform.position - transform.position;
-        transform.Translate(direction.normalized * enemyStats.speed * Time.deltaTime);
+        MoveTowardsMage();
+    }
+    private void MoveTowardsMage()
+    {
+        navMeshAgent.SetDestination(mageTransform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

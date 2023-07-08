@@ -22,6 +22,8 @@ public class EnemyThree : MonoBehaviour
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
         StartCoroutine(ToggleCanTakeDamage());
         navMeshAgent.speed = enemyStats.speed;
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
     }
 
     private void Update()

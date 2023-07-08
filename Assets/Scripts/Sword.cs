@@ -4,8 +4,9 @@ public class Sword : MonoBehaviour
 {
     private Vector3 target;
     [SerializeField] private float swordSpeed = 5f;
-    [SerializeField] private bool canMove;
+    [SerializeField] private bool canMove = true;
     [SerializeField] private bool canKill = true;
+
     public void SetTarget(Vector3 target, float swordspeed)
     {
         this.target = target;
@@ -23,10 +24,10 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && canKill)
+        if (other.CompareTag("Enemy"))
         {
             Monster monster = other.GetComponent<Monster>();
-            if (monster != null)
+            if (monster != null) //canKill not working ????
             {
                 monster.Kill();
                 if (monster.canTakeDamage)
@@ -38,7 +39,6 @@ public class Sword : MonoBehaviour
         if (other.CompareTag("Mage"))
         {
             canMove = false;
-            canKill = false;
             MageMovement mageMovement = other.GetComponent<MageMovement>();
             transform.SetParent(mageMovement.transform);
         }

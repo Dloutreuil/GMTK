@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mage
-  - Monster
   - Paladin
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Arena
+  - Sword
   - 
   - 
   - 

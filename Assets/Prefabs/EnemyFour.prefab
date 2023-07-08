@@ -153,5 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 053591cf886d4c44da2921aabedbb214, type: 2}
+  navMeshAgent: {fileID: 9159249549039270332}
   enemyToSpawn: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
     type: 3}

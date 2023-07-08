@@ -6,7 +6,7 @@ public class EnemyOne : MonoBehaviour
 {
     public EnemyStats enemyStats;
     private Monster monsterScript;
-    private NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
     private Transform mageTransform;
 
     private void Awake()
@@ -19,6 +19,8 @@ public class EnemyOne : MonoBehaviour
     {
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
         navMeshAgent.speed = enemyStats.speed;
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
     }
     private void Update()
     {
