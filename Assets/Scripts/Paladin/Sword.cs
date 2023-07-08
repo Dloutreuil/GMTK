@@ -62,6 +62,7 @@ public class Sword : MonoBehaviour
                     canKill = false;
                     canMove = false;
                     monster.Kill();
+                    GameManager.Instance.ChangeScore();
                 }
             }
         }

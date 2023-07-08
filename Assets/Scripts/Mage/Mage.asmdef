@@ -1,3 +1,16 @@
 {
-	"name": "Mage"
+    "name": "Mage",
+    "rootNamespace": "",
+    "references": [
+        "GUID:90bcdf1a0f68e1346bd951e9158fee6b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

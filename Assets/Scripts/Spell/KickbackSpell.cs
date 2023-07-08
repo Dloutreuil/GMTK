@@ -41,6 +41,9 @@ public class KickbackSpell : Spell
         }
 
         Debug.Log("forced");
+
+        GameObject vfxGO = Instantiate(vfx, parent.transform);
+        Destroy(vfx, 10);
     }
 
     private IEnumerator EnableNavMeshAgentCoroutine(NavMeshAgent navMeshAgent, float delay)

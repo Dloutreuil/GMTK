@@ -33,7 +33,7 @@ public class PaladinBehaviour : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
-        GameObject sword = Instantiate(swordPrefab, transform.position, rotation);
+        GameObject sword = Instantiate(swordPrefab, transform.position, swordPrefab.transform.rotation);
         Sword swordScript = sword.GetComponent<Sword>();
         if (swordScript != null)
         {
