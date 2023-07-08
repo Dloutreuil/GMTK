@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spell : ScriptableObject
 {
     public new string name;
+    public Sprite spellSprite;
     public float cooldownTime;
     public float activeTime;
     public virtual void Activate(GameObject parent)

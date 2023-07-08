@@ -21,7 +21,7 @@ public class DashSpell : Spell
         MageMovement mageMovement = parent.GetComponent<MageMovement>();
         BoxCollider2D collider = parent.GetComponent<BoxCollider2D>();
 
-        collider.enabled = false;
+        collider.enabled = true;
         mageMovement.moveSpeed = mageMovement.moveSpeed - dashVelocity;
         Debug.Log("undashed");
 
