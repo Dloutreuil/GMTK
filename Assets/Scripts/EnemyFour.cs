@@ -1,33 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-[RequireComponent(typeof(Monster))]
 
-public class EnemyOne : MonoBehaviour
+[RequireComponent(typeof(Monster))]
+public class EnemyFour : MonoBehaviour
 {
     public EnemyStats enemyStats;
     private Monster monsterScript;
-    private NavMeshAgent navMeshAgent;
+    
     private Transform mageTransform;
+
+    public GameObject enemyToSpawn;
 
     private void Awake()
     {
         monsterScript = GetComponent<Monster>();
-        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Start()
     {
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
-        navMeshAgent.speed = enemyStats.speed;
-    }
-    private void Update()
-    {
-        MoveTowardsMage();
     }
 
-    private void MoveTowardsMage()
+    private void Update()
     {
-        navMeshAgent.SetDestination(mageTransform.position);
+        Vector2 direction = mageTransform.position - transform.position;
+        transform.Translate(direction.normalized * enemyStats.speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,5 +35,10 @@ public class EnemyOne : MonoBehaviour
         {
             mageBehaviour.TakeDamage(enemyStats.damage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(enemyToSpawn, transform.position, Quaternion.identity); 
     }
 }

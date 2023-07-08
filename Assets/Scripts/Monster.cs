@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool canTakeDamage = true;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Kill()
     {
-        print("I have been killed");
-        Destroy(gameObject);
+        if (canTakeDamage)
+        {
+            print("I have been killed");
+            Destroy(gameObject);
+        }
     }
 }
