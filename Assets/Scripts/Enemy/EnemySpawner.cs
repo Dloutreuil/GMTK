@@ -24,6 +24,8 @@ public class EnemySpawner : MonoBehaviour
     private float currentSpawnerCooldown;
     private List<EnemyPrefab> availablePrefabs;
 
+    public GameObject spawnPreview;
+
     private void Awake()
     {
         navMeshSurface = FindObjectOfType<NavMeshSurface>();
@@ -71,7 +73,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 randomPosition = GetRandomSpawnPosition();
 
             // Create a preview sprite at the random position
-            GameObject previewSprite = Instantiate(enemyPrefab.prefab, randomPosition, Quaternion.identity, gameObject.transform);
+            GameObject previewSprite = Instantiate(spawnPreview, randomPosition, Quaternion.identity, gameObject.transform);
             Renderer spriteRenderer = previewSprite.GetComponentInChildren<Renderer>();
             spriteRenderer.material.color = new Color(1f, 1f, 1f, 0.5f); // Set the preview sprite's color and transparency
 

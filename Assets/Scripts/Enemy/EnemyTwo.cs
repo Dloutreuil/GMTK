@@ -89,7 +89,7 @@ public class EnemyTwo : MonoBehaviour
 
     private void CheckIfStuck()
     {
-        if (Vector2.Distance(transform.position, currentTargetPosition) <= 0.1f)
+        if (Vector2.Distance(transform.position, currentTargetPosition) <= 0.25f)
         {
             navMeshAgent.SetDestination(Vector3.zero);
         }
