@@ -44,7 +44,7 @@ public class SpellHolder : MonoBehaviour
                         spell.BeginCooldown(gameObject);
                         state = SpellState.cooldown;
                         cooldownTime = spell.cooldownTime;
-                        //spell = null;
+                        spell = null;
                     }
                     break;
 

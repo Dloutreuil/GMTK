@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 [System.Serializable]
 public class SpawnableSpellData
 {
@@ -16,6 +15,7 @@ public class SpellManager : MonoBehaviour
 {
     public List<SpawnableSpellData> spawnableSpells = new List<SpawnableSpellData>();
 
+    private Dictionary<GameObject, SpawnableSpellData> spellDataMap = new Dictionary<GameObject, SpawnableSpellData>();
     private Dictionary<GameObject, int> spawnedSpellCount = new Dictionary<GameObject, int>();
 
     private static SpellManager instance;
@@ -31,16 +31,19 @@ public class SpellManager : MonoBehaviour
         {
             instance = this;
         }
+
+        // Build the spell data map for efficient lookup
+        foreach (SpawnableSpellData spellData in spawnableSpells)
+        {
+            if (!spellDataMap.ContainsKey(spellData.spellPrefab))
+            {
+                spellDataMap.Add(spellData.spellPrefab, spellData);
+            }
+        }
     }
+
     public void DropSpell(Vector3 positionToSpawn)
     {
-        // Check if any spawnable spell is available
-        if (spawnableSpells.Count == 0)
-        {
-            Debug.LogWarning("No spawnable spells available.");
-            return;
-        }
-
         // Randomly select a spell to spawn based on drop rates
         GameObject spellToSpawn = SelectRandomSpell();
         if (spellToSpawn == null)
@@ -51,7 +54,8 @@ public class SpellManager : MonoBehaviour
 
         // Check if the maximum number of spells has been spawned for the selected spell
         int spawnedCount = GetSpawnedSpellCount(spellToSpawn);
-        if (spawnedCount >= spellToSpawn.GetComponent<SpawnableSpellData>().maximumSpawned)
+        SpawnableSpellData spellData = spellDataMap[spellToSpawn];
+        if (spawnedCount >= spellData.maximumSpawned)
         {
             Debug.LogWarning("Maximum number of spells spawned for the selected spell.");
             return;
@@ -61,10 +65,7 @@ public class SpellManager : MonoBehaviour
         GameObject instantiatedSpell = Instantiate(spellToSpawn, positionToSpawn, Quaternion.identity);
 
         // Start the destroy cooldown timer
-        StartCoroutine(DestroySpellAfterCooldown(instantiatedSpell, spellToSpawn));
-
-        // Increment the spawned count for the selected spell
-        IncrementSpawnedSpellCount(spellToSpawn);
+        StartCoroutine(DestroySpellAfterCooldown(instantiatedSpell, spellData));
     }
 
     private GameObject SelectRandomSpell()
@@ -116,18 +117,23 @@ public class SpellManager : MonoBehaviour
         }
     }
 
-    private IEnumerator DestroySpellAfterCooldown(GameObject spellObject, GameObject spellPrefab)
+    private IEnumerator DestroySpellAfterCooldown(GameObject spellObject, SpawnableSpellData spellData)
     {
-        SpawnableSpellData spellData = spellPrefab.GetComponent<SpawnableSpellData>();
+        float cooldownTimer = spellData.destroyCooldown;
 
-        yield return new WaitForSeconds(spellData.destroyCooldown);
+        while (cooldownTimer > 0f)
+        {
+            cooldownTimer -= Time.deltaTime;
+            yield return null;
+        }
 
         Destroy(spellObject);
 
         // Decrement the spawned count for the spell
-        if (spawnedSpellCount.ContainsKey(spellPrefab))
+        if (spawnedSpellCount.ContainsKey(spellData.spellPrefab))
         {
-            spawnedSpellCount[spellPrefab]--;
+            spawnedSpellCount[spellData.spellPrefab]--;
         }
     }
+
 }

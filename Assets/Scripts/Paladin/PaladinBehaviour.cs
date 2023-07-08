@@ -47,6 +47,9 @@ public class PaladinBehaviour : MonoBehaviour
         collider.enabled = true;
 
         amountOfSwordThrown++;
+
+        Destroy(sword, 30);
+        DestroyedByWall();
     }
 
     public void DestroyedByWall()
