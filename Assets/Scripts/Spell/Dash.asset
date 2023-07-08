@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dash
   spellSprite: {fileID: 0}
+  vfx: {fileID: 7317517733021486126, guid: 39b33a6310430a842aec148e0b1320a7, type: 3}
   cooldownTime: 1
   activeTime: 0.25
   dashVelocity: 5

@@ -16,7 +16,10 @@ public class PaladinSwordReset : MonoBehaviour
     {
         if (other.CompareTag("Mage"))
         {
+            Debug.Log("tezst");
             paladinBehaviour.canThrow = true;
+            Sword sword = other.gameObject.GetComponentInChildren<Sword>();
+            sword.DestroySword();
         }
     }
 

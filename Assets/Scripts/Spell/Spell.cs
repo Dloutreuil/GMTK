@@ -11,8 +11,7 @@ public class Spell : ScriptableObject
     public float activeTime;
     public virtual void Activate(GameObject parent)
     {
-        GameObject vfxGO = Instantiate(vfx, parent.transform);
-        Destroy(vfx, 10);
+        
     }
 
     public virtual void BeginCooldown(GameObject parent)

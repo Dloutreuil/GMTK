@@ -15,6 +15,9 @@ public class DashSpell : Spell
         mageMovement.moveSpeed = mageMovement.moveSpeed + dashVelocity;
 
         Debug.Log("dashed");
+
+        GameObject vfxGO = Instantiate(vfx, parent.transform);
+        Destroy(vfxGO, 10);
     }
     public override void BeginCooldown(GameObject parent)
     {

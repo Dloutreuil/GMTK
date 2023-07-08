@@ -23,6 +23,8 @@ public class GrabSwordSpell : Spell
         sword.moveTowardsMage = true;
         sword.swordSpeed = attractionForce;
 
+        GameObject vfxGO = Instantiate(vfx, parent.transform);
+        Destroy(vfxGO, 10);
 
         /*Debug.Log("grab");
         Sword sword = FindObjectOfType<Sword>();

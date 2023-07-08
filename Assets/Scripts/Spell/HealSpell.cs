@@ -11,6 +11,9 @@ public class HealSpell : Spell
     {
         MageBehaviour mageBehaviour = FindObjectOfType<MageBehaviour>();
         mageBehaviour.health += healAmount;
+
+        GameObject vfxGO = Instantiate(vfx, parent.transform);
+        Destroy(vfxGO, 10);
     }
 
     public override void BeginCooldown(GameObject parent)

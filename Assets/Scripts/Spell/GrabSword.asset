@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: GrabSword
   m_EditorClassIdentifier: 
   name: grab sword
+  spellSprite: {fileID: 0}
+  vfx: {fileID: 7363213973068788972, guid: 5e482076efcbfe74faeb86d8db82ea1f, type: 3}
   cooldownTime: 0
   activeTime: 1
   target: {fileID: 0}

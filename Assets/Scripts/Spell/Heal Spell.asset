@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Heal Spell
   m_EditorClassIdentifier: 
   name: Heal
+  spellSprite: {fileID: 0}
+  vfx: {fileID: 5505379092357145039, guid: 0f04f8ffa1eb19f4c8104ce8a0ffa269, type: 3}
   cooldownTime: 0
   activeTime: 1
   healAmount: 1
