@@ -11,25 +11,32 @@ public class EnemyThree : MonoBehaviour
     private Monster monsterScript;
     private Transform mageTransform;
     public float toggleDelay = 3f;
+    private bool canMove = false;
 
     private void Awake()
     {
         monsterScript = GetComponent<Monster>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
-    private void Start()
+    private IEnumerator Start()
     {
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
-        StartCoroutine(ToggleCanTakeDamage());
         navMeshAgent.speed = enemyStats.speed;
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
+        yield return new WaitForSeconds(3);
+        StartCoroutine(ToggleCanTakeDamage());
+        canMove = true;
     }
-
     private void Update()
     {
-        MoveTowardsMage();
+        if (canMove)
+        {
+            MoveTowardsMage();
+        }
     }
+
+
 
     private void MoveTowardsMage()
     {

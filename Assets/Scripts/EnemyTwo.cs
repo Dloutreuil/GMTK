@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Monster))]
@@ -16,32 +17,42 @@ public class EnemyTwo : MonoBehaviour
     public float movementRadius = 5f;
 
     private float nextInstantiationTime = 0f;
+
+    private bool canMove = false;
+
     private void Awake()
     {
         target = FindObjectOfType<MageBehaviour>().transform;
         monsterScript = GetComponent<Monster>();
-
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
-        SetRandomTargetPosition();
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
         navMeshAgent.speed = enemyStats.speed;
+
+        yield return new WaitForSeconds(3);
+        SetRandomTargetPosition();
+        canMove = true;
     }
 
     private void Update()
     {
-        MoveToTargetPosition();
-
-        if (Time.time >= nextInstantiationTime)
+        if (canMove)
         {
-            InstantiateProjectileTowardsTarget();
-            nextInstantiationTime = Time.time + instantiationDelay;
+
+            MoveToTargetPosition();
+
+            if (Time.time >= nextInstantiationTime)
+            {
+                InstantiateProjectileTowardsTarget();
+                nextInstantiationTime = Time.time + instantiationDelay;
+            }
         }
     }
+
 
     private void MoveToTargetPosition()
     {

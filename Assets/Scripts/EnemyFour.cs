@@ -13,23 +13,29 @@ public class EnemyFour : MonoBehaviour
     private Transform mageTransform;
 
     public GameObject enemyToSpawn;
+    private bool canMove = false;
 
     private void Awake()
     {
         monsterScript = GetComponent<Monster>();
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
+        navMeshAgent.speed = enemyStats.speed;
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
-        navMeshAgent.speed = enemyStats.speed;
-    }
 
+        yield return new WaitForSeconds(3);
+        canMove = true;
+    }
     private void Update()
     {
-        MoveTowardsMage();
+        if (canMove)
+        {
+            MoveTowardsMage();
+        }
     }
     private void MoveTowardsMage()
     {

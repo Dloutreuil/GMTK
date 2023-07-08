@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 [RequireComponent(typeof(Monster))]
 
@@ -9,27 +10,35 @@ public class EnemyOne : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     private Transform mageTransform;
 
+    private bool canMove = false;
     private void Awake()
     {
         monsterScript = GetComponent<Monster>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         mageTransform = FindObjectOfType<MageBehaviour>().transform;
         navMeshAgent.speed = enemyStats.speed;
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
+
+        yield return new WaitForSeconds(3);
+        canMove = true;
     }
     private void Update()
     {
-        MoveTowardsMage();
+        if (canMove)
+        {
+            MoveTowardsMage();
+        }
     }
 
     private void MoveTowardsMage()
     {
-        navMeshAgent.SetDestination(mageTransform.position);
+        if (navMeshAgent != null)
+            navMeshAgent.SetDestination(mageTransform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
