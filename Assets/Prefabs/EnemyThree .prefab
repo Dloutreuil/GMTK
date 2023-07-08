@@ -15,12 +15,8 @@ GameObject:
   - component: {fileID: 692453880993537921}
   - component: {fileID: 2126068862}
   - component: {fileID: 6052351194734100808}
-<<<<<<< Updated upstream
+  - component: {fileID: -4005532956867251884}
   m_Layer: 8
-=======
-  - component: {fileID: 8055073241536175838}
-  m_Layer: 0
->>>>>>> Stashed changes
   m_Name: 'EnemyThree '
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -230,7 +226,7 @@ PolygonCollider2D:
       - {x: -0.53, y: -0.74}
       - {x: -0.53999996, y: -0.75}
       - {x: -0.53, y: -0.75}
---- !u!95 &8055073241536175838
+--- !u!95 &-4005532956867251884
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
