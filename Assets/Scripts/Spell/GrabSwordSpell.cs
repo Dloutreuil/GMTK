@@ -21,6 +21,8 @@ public class GrabSwordSpell : Spell
             parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
         }
         sword.moveTowardsMage = true;
+        sword.swordSpeed = attractionForce;
+
 
         /*Debug.Log("grab");
         Sword sword = FindObjectOfType<Sword>();

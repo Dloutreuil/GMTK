@@ -85,6 +85,7 @@ public class EnemyTwo : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, transform.position, rotation);
         Projectile projectileScript = projectile.GetComponent<Projectile>();
         projectileScript.SetTarget(target.position);
+        Destroy(projectile, 5);
     }
 
     private void CheckIfStuck()

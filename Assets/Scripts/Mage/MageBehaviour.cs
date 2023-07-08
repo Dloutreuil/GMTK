@@ -72,4 +72,6 @@ public class MageBehaviour : MonoBehaviour
         // Restore the initial visibility state of the character
         characterRenderer.enabled = initialVisibility;
     }
+
+
 }

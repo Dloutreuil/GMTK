@@ -9,7 +9,7 @@ public class DashSpell : Spell
     public override void Activate(GameObject parent)
     {
         MageMovement mageMovement = parent.GetComponent<MageMovement>();
-        BoxCollider2D collider = parent.GetComponent<BoxCollider2D>();
+        PolygonCollider2D collider = parent.GetComponent<PolygonCollider2D>();
 
         collider.enabled = false;
         mageMovement.moveSpeed = mageMovement.moveSpeed + dashVelocity;
@@ -19,7 +19,7 @@ public class DashSpell : Spell
     public override void BeginCooldown(GameObject parent)
     {
         MageMovement mageMovement = parent.GetComponent<MageMovement>();
-        BoxCollider2D collider = parent.GetComponent<BoxCollider2D>();
+        PolygonCollider2D collider = parent.GetComponent<PolygonCollider2D>();
 
         collider.enabled = true;
         mageMovement.moveSpeed = mageMovement.moveSpeed - dashVelocity;

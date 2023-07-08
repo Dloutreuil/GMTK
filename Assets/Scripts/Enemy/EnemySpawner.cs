@@ -51,13 +51,49 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+
+    private EnemyPrefab GetRandomPrefab()
+    {
+        List<EnemyPrefab> validPrefabs = GetValidPrefabs();
+        if (validPrefabs.Count == 0)
+        {
+            return null;
+        }
+
+        int randomIndex = Random.Range(0, validPrefabs.Count);
+        return validPrefabs[randomIndex];
+    }
+
+    private List<EnemyPrefab> GetValidPrefabs()
+    {
+        List<EnemyPrefab> validPrefabs = new List<EnemyPrefab>();
+        foreach (EnemyPrefab prefab in availablePrefabs)
+        {
+            if (CanSpawnEnemy(prefab))
+            {
+                validPrefabs.Add(prefab);
+            }
+        }
+        return validPrefabs;
+    }
+
     private void SpawnEnemy()
     {
-        EnemyPrefab prefabToSpawn = GetRandomPrefab();
-        if (prefabToSpawn != null && CanSpawnEnemy(prefabToSpawn))
+        foreach (EnemyPrefab enemyPrefab in availablePrefabs)
         {
-            StartCoroutine(SpawnEnemyCoroutine(prefabToSpawn));
-            prefabToSpawn.lastSpawnTime = Time.time;
+            if (enemyPrefab.isSpawning)
+                continue;
+
+            if (CanSpawnEnemy(enemyPrefab))
+            {
+                StartCoroutine(SpawnEnemyCoroutine(enemyPrefab));
+                enemyPrefab.lastSpawnTime = Time.time;
+                break; // Spawned an enemy, exit the loop
+            }
+            else
+            {
+                enemyPrefab.lastSpawnTime += Time.deltaTime; // Continue increasing lastSpawnTime if prefab cannot be spawned
+            }
         }
     }
 
@@ -115,36 +151,9 @@ public class EnemySpawner : MonoBehaviour
         enemyPrefab.isSpawning = false;
     }
 
-
-
     private void InitializeAvailablePrefabs()
     {
         availablePrefabs = new List<EnemyPrefab>(enemyPrefabs);
-    }
-
-    private EnemyPrefab GetRandomPrefab()
-    {
-        List<EnemyPrefab> validPrefabs = GetValidPrefabs();
-        if (validPrefabs.Count == 0)
-        {
-            return null;
-        }
-
-        int randomIndex = Random.Range(0, validPrefabs.Count);
-        return validPrefabs[randomIndex];
-    }
-
-    private List<EnemyPrefab> GetValidPrefabs()
-    {
-        List<EnemyPrefab> validPrefabs = new List<EnemyPrefab>();
-        foreach (EnemyPrefab prefab in availablePrefabs)
-        {
-            if (CanSpawnEnemy(prefab))
-            {
-                validPrefabs.Add(prefab);
-            }
-        }
-        return validPrefabs;
     }
 
     private bool CanSpawnEnemy(EnemyPrefab enemyPrefab)

@@ -4,7 +4,7 @@ public class Sword : MonoBehaviour
 {
     private Vector3 target;
     [SerializeField] private float closeDistanceThreshold = 0.5f; // Threshold to consider the sword close to the target
-    [SerializeField] private float swordSpeed = 5f;
+    [HideInInspector] public float swordSpeed = 5f;
     [SerializeField] private bool canMove = true;
     [SerializeField] private bool canKill = true;
     [HideInInspector] public bool moveTowardsMage = false;
@@ -72,12 +72,7 @@ public class Sword : MonoBehaviour
             MageMovement mageMovement = other.GetComponent<MageMovement>();
             transform.SetParent(mageMovement.transform);
         }
-        if (other.CompareTag("Paladin"))
-        {
-            PaladinSwordReset paladinSwordReset = other.gameObject.GetComponentInChildren<PaladinSwordReset>();
-            paladinSwordReset.paladinBehaviour.canThrow = true;
-            Destroy(gameObject);
-        }
+
 
         if (other.CompareTag("Wall"))
         {

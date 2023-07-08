@@ -12,4 +12,13 @@ public class PaladinSwordReset : MonoBehaviour
         paladinBehaviour = GetComponentInParent<PaladinBehaviour>();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Mage"))
+        {
+            paladinBehaviour.canThrow = true;
+            Destroy(gameObject);
+        }
+    }
+
 }
