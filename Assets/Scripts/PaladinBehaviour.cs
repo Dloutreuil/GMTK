@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PaladinBehaviour : MonoBehaviour
 {
@@ -23,18 +24,24 @@ public class PaladinBehaviour : MonoBehaviour
         }
     }
 
-    private void InstantiateSwordTowardsTarget()
+    private IEnumerator InstantiateSwordTowardsTarget()
     {
         Vector3 direction = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
         GameObject sword = Instantiate(swordPrefab, transform.position, rotation);
         Sword swordScript = sword.GetComponent<Sword>();
-
         if (swordScript != null)
         {
             swordScript.SetTarget(target.position, swordSpeed);
         }
         canThrow = false;
+
+        BoxCollider2D collider = sword.GetComponent<BoxCollider2D>();
+        collider.enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        collider.enabled = true;
+
+
     }
 }

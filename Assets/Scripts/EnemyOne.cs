@@ -41,7 +41,7 @@ public class EnemyOne : MonoBehaviour
             navMeshAgent.SetDestination(mageTransform.position);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         MageBehaviour mageBehaviour = other.GetComponent<MageBehaviour>();
         if (mageBehaviour != null)

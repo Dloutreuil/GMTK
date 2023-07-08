@@ -5,16 +5,6 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public bool canTakeDamage = true;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void Kill()
     {
@@ -22,6 +12,7 @@ public class Monster : MonoBehaviour
         {
             print("I have been killed");
             Destroy(gameObject);
+            SpellManager.Instance.DropSpell(transform.position);
         }
     }
 }

@@ -79,6 +79,16 @@ public class EnemyTwo : MonoBehaviour
         projectileScript.SetTarget(target.position);
     }
 
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        MageBehaviour mageBehaviour = other.GetComponent<MageBehaviour>();
+        if (mageBehaviour != null)
+        {
+            mageBehaviour.TakeDamage(enemyStats.damage);
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
