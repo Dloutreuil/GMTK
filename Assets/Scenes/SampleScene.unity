@@ -1426,6 +1426,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1675639308657732976, guid: 5bef497e65200974f998d8d042e531a9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5857d94f709f0bc468958e053725167d,
+        type: 3}
     - target: {fileID: 1675639308657732977, guid: 5bef497e65200974f998d8d042e531a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1451,6 +1457,12 @@ PrefabInstance:
       propertyPath: swordPrefab
       value: 
       objectReference: {fileID: 3096941858926035338, guid: 958662b52a021334e8f5bc05293acc91,
+        type: 3}
+    - target: {fileID: 1675639308946154137, guid: 5bef497e65200974f998d8d042e531a9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 609966323fabce542b734389d4e72e90,
         type: 3}
     - target: {fileID: 1675639308946154142, guid: 5bef497e65200974f998d8d042e531a9,
         type: 3}
