@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    public float delayStart = 3f;
     public bool canTakeDamage = true;
     public bool isEnemyFour = false;
     [HideInInspector] public GameObject enemyToSpawn;

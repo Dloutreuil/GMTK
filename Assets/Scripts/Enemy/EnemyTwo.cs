@@ -16,6 +16,9 @@ public class EnemyTwo : MonoBehaviour
     public float instantiationDelay = 3f;
     public float movementRadius = 5f;
 
+    public float positionCheckInterval = 3f;
+    private float currentPositionTimer = 0f;
+
     private float nextInstantiationTime = 0f;
 
     private bool canMove = false;
@@ -33,7 +36,7 @@ public class EnemyTwo : MonoBehaviour
         navMeshAgent.updateUpAxis = false;
         navMeshAgent.speed = enemyStats.speed;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(monsterScript.delayStart);
         SetRandomTargetPosition();
         canMove = true;
     }
@@ -42,7 +45,6 @@ public class EnemyTwo : MonoBehaviour
     {
         if (canMove)
         {
-
             MoveToTargetPosition();
 
             if (Time.time >= nextInstantiationTime)
@@ -50,9 +52,15 @@ public class EnemyTwo : MonoBehaviour
                 InstantiateProjectileTowardsTarget();
                 nextInstantiationTime = Time.time + instantiationDelay;
             }
+
+            currentPositionTimer += Time.deltaTime;
+            if (currentPositionTimer >= positionCheckInterval)
+            {
+                currentPositionTimer = 0f;
+                CheckIfStuck();
+            }
         }
     }
-
 
     private void MoveToTargetPosition()
     {
@@ -79,6 +87,13 @@ public class EnemyTwo : MonoBehaviour
         projectileScript.SetTarget(target.position);
     }
 
+    private void CheckIfStuck()
+    {
+        if (Vector2.Distance(transform.position, currentTargetPosition) <= 0.1f)
+        {
+            navMeshAgent.SetDestination(null);
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {

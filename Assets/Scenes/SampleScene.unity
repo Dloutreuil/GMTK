@@ -932,9 +932,10 @@ GameObject:
   - component: {fileID: 2042470992}
   - component: {fileID: 2042470991}
   - component: {fileID: 2042470993}
+  - component: {fileID: 2042470994}
   m_Layer: 6
   m_Name: Arena
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1007,6 +1008,55 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &2042470993
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042470989}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.009265408, y: 7.118456}
+  - {x: -2.4197798, y: 6.5236397}
+  - {x: -4.929332, y: 5.135139}
+  - {x: -5.8494434, y: 3.9241219}
+  - {x: -6.3765163, y: 2.7995167}
+  - {x: -6.904284, y: 1.4573164}
+  - {x: -6.977592, y: -0.043735057}
+  - {x: -6.887748, y: -1.3774263}
+  - {x: -6.255519, y: -3.27788}
+  - {x: -5.704404, y: -4.142995}
+  - {x: -5.095486, y: -4.7646637}
+  - {x: -4.395254, y: -5.5184355}
+  - {x: -2.5038524, y: -6.4789505}
+  - {x: 0.011725314, y: -7.101004}
+  - {x: 2.7788935, y: -6.397626}
+  - {x: 4.9225273, y: -5.0471716}
+  - {x: 5.8453765, y: -4.0396094}
+  - {x: 6.288961, y: -3.2338061}
+  - {x: 6.871019, y: -1.4983989}
+  - {x: 7.004156, y: -0.0133449435}
+  - {x: 6.931839, y: 0.9076563}
+  - {x: 6.721378, y: 2.3358183}
+  - {x: 6.185207, y: 3.4797919}
+  - {x: 5.784869, y: 4.0793295}
+  - {x: 5.082076, y: 4.7236485}
+  - {x: 4.443688, y: 5.446691}
+  - {x: 3.1037655, y: 6.3301864}
+  - {x: 1.9861488, y: 6.62461}
+  - {x: -0.004762744, y: 7.1259294}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &2042470994
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1130,6 +1180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 193181414042425136, guid: ef3e7f8a69c708a4380bea66ab4033e1,
         type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 193181414042425136, guid: ef3e7f8a69c708a4380bea66ab4033e1,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1201,11 +1256,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'EnemyThree '
-      objectReference: {fileID: 0}
-    - target: {fileID: 692453880993537935, guid: 7583a24c20b215c45b13cd0aee49413d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7583a24c20b215c45b13cd0aee49413d, type: 3}
@@ -1403,6 +1453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
         type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1474,6 +1529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyFour
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806455228294197430, guid: ecb6f5bbfaa965d4fbf64a549a1f26b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8806455228294197430, guid: ecb6f5bbfaa965d4fbf64a549a1f26b8,
         type: 3}

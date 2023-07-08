@@ -28,7 +28,8 @@ public class EnemyFour : MonoBehaviour
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(monsterScript.delayStart);
+
         canMove = true;
     }
     private void Update()

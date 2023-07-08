@@ -25,7 +25,8 @@ public class EnemyThree : MonoBehaviour
         navMeshAgent.speed = enemyStats.speed;
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(monsterScript.delayStart);
+
         StartCoroutine(ToggleCanTakeDamage());
         canMove = true;
     }
