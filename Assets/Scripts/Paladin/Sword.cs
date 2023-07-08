@@ -3,6 +3,7 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     private Vector3 target;
+    [SerializeField] private float closeDistanceThreshold = 0.5f; // Threshold to consider the sword close to the target
     [SerializeField] private float swordSpeed = 5f;
     [SerializeField] private bool canMove = true;
     [SerializeField] private bool canKill = true;
@@ -19,6 +20,14 @@ public class Sword : MonoBehaviour
         {
             Vector3 direction = target - transform.position;
             transform.Translate(direction.normalized * swordSpeed * Time.deltaTime, Space.World);
+
+            // Check if the sword is close to the target
+            float distanceToTarget = Vector3.Distance(transform.position, target);
+            if (distanceToTarget <= closeDistanceThreshold)
+            {
+                canMove = false;
+                canKill = false;
+            }
         }
     }
 
@@ -27,7 +36,7 @@ public class Sword : MonoBehaviour
         if (other.CompareTag("Enemy") && canKill)
         {
             Monster monster = other.GetComponent<Monster>();
-            if (monster != null) //canKill not working ????
+            if (monster != null) 
             {
                 monster.Kill();
                 if (monster.canTakeDamage)
