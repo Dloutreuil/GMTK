@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7744698509613805270}
   - component: {fileID: 6621714405051390412}
   - component: {fileID: -5299160911118842015}
+  - component: {fileID: 9019133161895504962}
   m_Layer: 0
   m_Name: EnemyFour
   m_TagString: Enemy
@@ -216,3 +217,23 @@ PolygonCollider2D:
       - {x: 0.08, y: -0.96999997}
       - {x: 0.08, y: -0.7}
       - {x: 0.17999999, y: -0.7}
+--- !u!95 &9019133161895504962
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806455228294197430}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03f1a89c603eeab4883c1adcc137fbda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
