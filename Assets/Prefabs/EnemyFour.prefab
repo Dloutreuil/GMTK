@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9159249549039270332}
   - component: {fileID: 6232255805410021704}
   - component: {fileID: 7744698509613805270}
+  - component: {fileID: 6621714405051390412}
   m_Layer: 0
   m_Name: EnemyFour
   m_TagString: Enemy
@@ -156,3 +157,24 @@ MonoBehaviour:
   navMeshAgent: {fileID: 9159249549039270332}
   enemyToSpawn: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
     type: 3}
+--- !u!50 &6621714405051390412
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806455228294197430}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

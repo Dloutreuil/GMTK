@@ -24,7 +24,7 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && canKill)
         {
             Monster monster = other.GetComponent<Monster>();
             if (monster != null) //canKill not working ????
@@ -33,6 +33,7 @@ public class Sword : MonoBehaviour
                 if (monster.canTakeDamage)
                 {
                     canMove = false;
+                    Debug.Log("killing enemy");
                 }
             }
         }

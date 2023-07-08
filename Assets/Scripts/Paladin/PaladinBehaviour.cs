@@ -18,7 +18,7 @@ public class PaladinBehaviour : MonoBehaviour
 
             if (nextInstantiationTime >= instantiationDelay)
             {
-                InstantiateSwordTowardsTarget();
+                StartCoroutine(InstantiateSwordTowardsTarget());
                 nextInstantiationTime = 0;
             }
         }
@@ -37,7 +37,7 @@ public class PaladinBehaviour : MonoBehaviour
         }
         canThrow = false;
 
-        BoxCollider2D collider = sword.GetComponent<BoxCollider2D>();
+        CapsuleCollider2D collider = sword.GetComponent<CapsuleCollider2D>();
         collider.enabled = false;
         yield return new WaitForSeconds(1.5f);
         collider.enabled = true;

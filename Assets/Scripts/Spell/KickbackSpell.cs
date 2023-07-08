@@ -28,13 +28,15 @@ public class KickbackSpell : Spell
                 Rigidbody2D enemyRigidbody = collider.GetComponent<Rigidbody2D>();
                 if (enemyRigidbody != null)
                 {
+                    enemyRigidbody.bodyType = RigidbodyType2D.Dynamic;
                     Vector2 knockbackDirection = (enemyRigidbody.transform.position - parent.transform.position).normalized;
                     enemyRigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
                 }
 
                 // Re-enable the NavMeshAgent after a short delay
-                float delay = 0.5f; // Adjust this value as needed
+                float delay = 1f; // Adjust this value as needed
                 EnemyManager.Instance.StartCoroutine(EnableNavMeshAgentCoroutine(navMeshAgent, delay));
+
             }
         }
 
@@ -44,6 +46,8 @@ public class KickbackSpell : Spell
     private IEnumerator EnableNavMeshAgentCoroutine(NavMeshAgent navMeshAgent, float delay)
     {
         yield return new WaitForSeconds(delay);
+        EnemyManager.Instance.RestartAI();
+
         if (navMeshAgent != null)
         {
             navMeshAgent.enabled = true;
