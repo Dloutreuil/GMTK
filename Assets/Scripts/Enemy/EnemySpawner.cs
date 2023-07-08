@@ -105,7 +105,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 randomPosition = GetRandomSpawnPosition();
 
             // Create a preview sprite at the random position
-            GameObject previewSprite = Instantiate(enemyPrefab.prefab, randomPosition, Quaternion.identity);
+            GameObject previewSprite = Instantiate(enemyPrefab.prefab, randomPosition, Quaternion.identity, gameObject.transform);
             Renderer spriteRenderer = previewSprite.GetComponentInChildren<Renderer>();
             spriteRenderer.material.color = new Color(1f, 1f, 1f, 0.5f); // Set the preview sprite's color and transparency
 
@@ -148,7 +148,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Spawn the enemy at the valid position
-        GameObject instantiatedEnemy = Instantiate(enemyPrefab.prefab, position, Quaternion.identity);
+        GameObject instantiatedEnemy = Instantiate(enemyPrefab.prefab, position, Quaternion.identity, gameObject.transform);
         instantiatedEnemy.transform.position = position;
 
         enemyPrefab.lastSpawnTime = Time.time; // Update last spawn time for the spawned prefab

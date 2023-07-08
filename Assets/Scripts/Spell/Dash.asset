@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dbb289d706d894db740202dc14601c, type: 3}
   m_Name: Dash
   m_EditorClassIdentifier: 
-  name: 
-  cooldownTime: 0
-  activeTime: 0
+  name: Dash
+  cooldownTime: 1
+  activeTime: 0.5
+  dashVelocity: 10

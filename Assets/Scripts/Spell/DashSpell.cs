@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "Spell", menuName = "Spell/Dash Spell")]
 public class DashSpell : Spell
 {
     public float dashVelocity;

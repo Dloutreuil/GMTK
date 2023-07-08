@@ -40,7 +40,10 @@ public class EnemyThree : MonoBehaviour
 
     private void MoveTowardsMage()
     {
-        navMeshAgent.SetDestination(mageTransform.position);
+        if (navMeshAgent != null)
+        {
+            navMeshAgent.SetDestination(mageTransform.position);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
