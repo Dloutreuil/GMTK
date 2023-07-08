@@ -74,7 +74,7 @@ public class Sword : MonoBehaviour
         }
 
 
-        if (other.CompareTag("Wall"))
+        if (other.CompareTag("SwordWall"))
         {
             Debug.Log("collided w wall");
             PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();

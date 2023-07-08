@@ -8,6 +8,7 @@ TagManager:
   - Paladin
   - Enemy
   - Wall
+  - SwordWall
   layers:
   - Default
   - TransparentFX
