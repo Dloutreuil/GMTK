@@ -112,6 +112,11 @@ public class Sword : MonoBehaviour
         }
         if (other.CompareTag("Mage"))
         {
+            if (isGrabbed == false)
+            {
+                other.GetComponent<AudioSource>().Play();
+            }
+                
             canMove = false;
             canKill = false;
             isGrabbed = true;

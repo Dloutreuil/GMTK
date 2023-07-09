@@ -6,6 +6,7 @@ public class PaladinSwordReset : MonoBehaviour
 {
 
     public PaladinBehaviour paladinBehaviour;
+    public AudioSource audiosource;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class PaladinSwordReset : MonoBehaviour
     {
         if (other.CompareTag("Mage"))
         {
+            audiosource.PlayDelayed(1);
             Debug.Log("tezst");
             paladinBehaviour.canThrow = true;
             paladinBehaviour.amountOfSwordThrown = 0;

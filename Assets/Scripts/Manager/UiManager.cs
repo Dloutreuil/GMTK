@@ -19,7 +19,8 @@ public class UiManager : MonoBehaviour
     public Sprite health2;
     public Sprite health3;
     public Sprite health0;
-
+    public GameObject StopMusic;
+    public GameObject StartMusic;
 
     public GameObject loseScreen;
     private void Awake()
@@ -86,6 +87,8 @@ public class UiManager : MonoBehaviour
         currentTime.text = "";
 
         loseScreen.SetActive(true);
+        StopMusic.SetActive(false);
+        StartMusic.SetActive(true);
 
         currentScore.text = "";
         currentTime.text = "0";

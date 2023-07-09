@@ -8,6 +8,7 @@ public class PaladinBehaviour : MonoBehaviour
     public float instantiationDelay = 3f;
     public float swordSpeed = 5f;
     public bool canThrow = true;
+    public AudioSource audiosource;
 
     private float nextInstantiationTime = 0f;
 
@@ -38,6 +39,7 @@ public class PaladinBehaviour : MonoBehaviour
         {
             swordScript.SetTarget(target.position, swordSpeed);
         }
+        audiosource.Play();
         canThrow = false;
 
         CapsuleCollider2D collider = sword.GetComponent<CapsuleCollider2D>();

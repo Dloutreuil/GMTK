@@ -14,6 +14,7 @@ public class SpellDataPrefab : MonoBehaviour
             if (spellHolder.spell == null)
             {
                 spellHolder.spell = spellToSpawn;
+                other.GetComponent<AudioSource>().Play();
                 UiManager.Instance.UpdateSpell(spellToSpawn.spellSprite);
                 Destroy(gameObject);
             }
