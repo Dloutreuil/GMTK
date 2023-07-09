@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 749044266507339258}
   - component: {fileID: 8469491327758901023}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK_Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5977990415418708550}
   - component: {fileID: 249514708712543049}
   - component: {fileID: 8236232715863701739}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK Squared
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183549926334882159}
   - component: {fileID: 1116578695491184652}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Arena4
   m_TagString: SwordWall
   m_Icon: {fileID: 0}

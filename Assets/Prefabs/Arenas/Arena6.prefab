@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 749044266507339258}
   - component: {fileID: 8469491327758901023}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK_Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4211480334820903586}
   - component: {fileID: 7700237376844629375}
   - component: {fileID: 7807293388873253986}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK wall
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 662122332689831886}
   - component: {fileID: 2260937280087452837}
   - component: {fileID: 4738047084448646699}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK Omnitrix
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 6248013268027215993}
   - component: {fileID: 2357528993700765749}
   - component: {fileID: 8160832263925984042}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK Omnitrix (1)
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183549926334882159}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Arena6
   m_TagString: SwordWall
   m_Icon: {fileID: 0}

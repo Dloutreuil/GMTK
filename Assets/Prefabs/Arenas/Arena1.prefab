@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 749044266507339258}
   - component: {fileID: 8469491327758901023}
   - component: {fileID: 5560611673211077646}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK_Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 2114812666617049556}
   - component: {fileID: 2098217720000078145}
   - component: {fileID: 9056547012934641481}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK wall
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 5846313094078446486}
   - component: {fileID: 1951859624336252730}
   - component: {fileID: 7206048035485243179}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK wall (1)
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 825222524839314792}
   - component: {fileID: 2272285996889493119}
   - component: {fileID: 317057341024367297}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK wall (3)
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -615,8 +615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183549926334882159}
-  - component: {fileID: 1580051673884641143}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Arena1
   m_TagString: SwordWall
   m_Icon: {fileID: 0}
@@ -643,32 +642,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1580051673884641143
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7656919609937960575}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -3.23, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.21, y: 0.6}
-  m_EdgeRadius: 0
 --- !u!1 &8338632216659145399
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +655,7 @@ GameObject:
   - component: {fileID: 8046832746176426383}
   - component: {fileID: 6763334985251275078}
   - component: {fileID: 2366933121547882527}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GMTK wall (2)
   m_TagString: SwordWall
   m_Icon: {fileID: 0}

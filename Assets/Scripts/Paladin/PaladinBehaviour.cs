@@ -52,11 +52,15 @@ public class PaladinBehaviour : MonoBehaviour
 
     public void DestroyedByWall()
     {
-        amountOfSwordThrown = 0;
-        canThrow = true;
-        if (amountOfSwordThrown <= 0)
+        if (amountOfSwordThrown >= 1)
         {
-            nextInstantiationTime = 0;
+
+            amountOfSwordThrown = 0;
+            canThrow = true;
+            if (amountOfSwordThrown <= 0)
+            {
+                nextInstantiationTime = 0;
+            }
         }
     }
 }
