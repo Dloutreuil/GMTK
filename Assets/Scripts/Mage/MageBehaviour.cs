@@ -46,8 +46,7 @@ public class MageBehaviour : MonoBehaviour
 
         if(health <= 0)
         {
-            //game lose
-            Debug.LogWarning("Game Lost");
+            GameManager.Instance.GameLost();
         }
 
         UiManager.Instance.UpdateHealth(health);
