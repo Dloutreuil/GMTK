@@ -747,6 +747,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1446728073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1675639307515133696, guid: 5bef497e65200974f998d8d042e531a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675639308225482434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1464832772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,8 +1494,7 @@ PrefabInstance:
     - target: {fileID: 1196320169, guid: 5bef497e65200974f998d8d042e531a9, type: 3}
       propertyPath: spell
       value: 
-      objectReference: {fileID: 11400000, guid: 778bf29b7be5b3b438b1584389d6c653,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1675639307515133696, guid: 5bef497e65200974f998d8d042e531a9,
         type: 3}
       propertyPath: m_Name
@@ -1557,9 +1562,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1675639308657732977, guid: 5bef497e65200974f998d8d042e531a9,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675639308657732977, guid: 5bef497e65200974f998d8d042e531a9,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1675639308657732979, guid: 5bef497e65200974f998d8d042e531a9,
+        type: 3}
+      propertyPath: centrePoint
+      value: 
+      objectReference: {fileID: 1446728073}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bef497e65200974f998d8d042e531a9, type: 3}
 --- !u!1001 &3263248995056696748
