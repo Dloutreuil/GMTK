@@ -49,21 +49,20 @@ public class ArenaManager : MonoBehaviour
             if (arenaPairToSpawn.spawnableArena == currentSpawnedArena)
             {
                 // If it is, wait for the next spawn interval and continue to the next iteration
-                yield return new WaitForSeconds(spawnInterval);
-                continue;
+                break;
             }
 
             // Instantiate the preSpawnableArena
             GameObject preSpawnableArena = Instantiate(arenaPairToSpawn.preSpawnableArena, transform.position, Quaternion.identity);
 
             // Start blinking the preSpawnableArena
-            StartCoroutine(BlinkPreSpawnableArena(preSpawnableArena));
+            Coroutine preSpawnBlinkCoroutine = StartCoroutine(BlinkPreSpawnableArena(preSpawnableArena));
 
             // Wait until the blinking is done
             yield return new WaitForSeconds(preSpawnBlinkDuration);
 
             // Stop blinking the preSpawnableArena
-            StopCoroutine(BlinkPreSpawnableArena(preSpawnableArena));
+            StopCoroutine(preSpawnBlinkCoroutine);
             preSpawnableArena.SetActive(false);
 
             // Instantiate the spawnableArena
@@ -73,19 +72,29 @@ public class ArenaManager : MonoBehaviour
             currentSpawnedArena = spawnedArena;
             lastSpawnedArena = spawnedArena;
 
-            // Wait for the specified duration before starting the BlinkArenaWithCollider coroutine
             yield return new WaitForSeconds(timeToHoldArena);
 
+
             // Blink the spawnedArena for the specified duration while keeping its collider active
-            StartCoroutine(BlinkArenaWithCollider(spawnedArena, blinkDuration));
+            Coroutine blinkCoroutine = StartCoroutine(BlinkArenaWithCollider(spawnedArena, blinkDuration));
 
             // Wait for the specified blink duration
             yield return new WaitForSeconds(blinkDuration);
 
+            // Stop blinking the spawnedArena
+            StopCoroutine(blinkCoroutine);
+
             // Destroy the spawnedArena
             Destroy(spawnedArena);
+
+            // Destroy the preSpawnableArena
+            Destroy(preSpawnableArena);
+
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
+
+
 
 
     private ArenaPair GetRandomArenaPair()
@@ -129,16 +138,16 @@ public class ArenaManager : MonoBehaviour
         float elapsedTime = 0f;
         bool isBlinking = true;
 
-        // Get all colliders in the arena's children
-        Collider2D[] arenaColliders = arena.GetComponentsInChildren<Collider2D>();
+        // Get all PolygonCollider2D components in the arena's children
+        PolygonCollider2D[] arenaColliders = arena.GetComponentsInChildren<PolygonCollider2D>();
 
         while (isBlinking)
         {
             // Toggle the visibility of the arena
             arena.SetActive(!arena.activeSelf);
 
-            // Enable or disable colliders on all child objects
-            foreach (Collider2D collider in arenaColliders)
+            // Enable or disable PolygonCollider2D components on all child objects
+            foreach (PolygonCollider2D collider in arenaColliders)
             {
                 collider.enabled = arena.activeSelf;
             }
@@ -155,8 +164,8 @@ public class ArenaManager : MonoBehaviour
             yield return null;
         }
 
-        // Disable colliders on all child objects
-        foreach (Collider2D collider in arenaColliders)
+        // Disable PolygonCollider2D components on all child objects
+        foreach (PolygonCollider2D collider in arenaColliders)
         {
             collider.enabled = false;
         }

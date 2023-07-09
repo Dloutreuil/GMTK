@@ -15,16 +15,20 @@ public class GrabSwordSpell : Spell
         Debug.Log("grab");
         Sword sword = FindObjectOfType<Sword>();
         Rigidbody2D parentRigidbody = sword.GetComponent<Rigidbody2D>();
-        if (parentRigidbody != null && target != null)
-        {
-            Vector2 attractionDirection = target.transform.position - sword.transform.position;
-            parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
-        }
-        sword.moveTowardsMage = true;
-        sword.swordSpeed = attractionForce;
 
-        GameObject vfxGO = Instantiate(vfx, parent.transform);
-        Destroy(vfxGO, 10);
+        if (!sword.isGrabbed)
+        {
+            if (parentRigidbody != null && target != null)
+            {
+                Vector2 attractionDirection = target.transform.position - sword.transform.position;
+                parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
+            }
+            sword.moveTowardsMage = true;
+            sword.swordSpeed = attractionForce;
+
+            GameObject vfxGO = Instantiate(vfx, parent.transform);
+            Destroy(vfxGO, 10);
+        }
 
         /*Debug.Log("grab");
         Sword sword = FindObjectOfType<Sword>();

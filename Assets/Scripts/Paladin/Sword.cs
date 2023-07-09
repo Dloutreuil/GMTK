@@ -8,6 +8,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private bool canMove = true;
     [SerializeField] private bool canKill = true;
     [HideInInspector] public bool moveTowardsMage = false;
+    [HideInInspector] public bool isGrabbed = false;
     public void SetTarget(Vector3 target, float swordspeed)
     {
         this.target = target;
@@ -70,6 +71,7 @@ public class Sword : MonoBehaviour
         {
             canMove = false;
             canKill = false;
+            isGrabbed = true;
             MageMovement mageMovement = other.GetComponent<MageMovement>();
             transform.SetParent(mageMovement.transform);
         }

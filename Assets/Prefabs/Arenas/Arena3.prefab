@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3801164610955050100}
   - component: {fileID: 4211480334820903586}
-  - component: {fileID: 9016426306210992027}
+  - component: {fileID: 7099043166395610952}
   m_Layer: 6
   m_Name: GMTK wall
   m_TagString: Untagged
@@ -169,8 +169,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9016426306210992027
-BoxCollider2D:
+--- !u!60 &7099043166395610952
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -192,9 +192,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 6.4}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}
 --- !u!1 &4234930364630228212
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8897825081496974229}
   - component: {fileID: 5301218929744308285}
-  - component: {fileID: 1710631796906225729}
+  - component: {fileID: 8191172944599207381}
   m_Layer: 6
   m_Name: GMTK wall (1)
   m_TagString: Untagged
@@ -280,8 +283,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1710631796906225729
-BoxCollider2D:
+--- !u!60 &8191172944599207381
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -303,9 +306,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 6.4}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}
 --- !u!1 &7656919609937960575
 GameObject:
   m_ObjectHideFlags: 0

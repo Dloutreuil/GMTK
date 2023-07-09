@@ -11,9 +11,12 @@ public class SpellDataPrefab : MonoBehaviour
         if (other.gameObject.CompareTag("Mage"))
         {
             SpellHolder spellHolder = other.GetComponent<SpellHolder>();
-            spellHolder.spell = spellToSpawn;
-            UiManager.Instance.UpdateSpell(spellToSpawn.spellSprite);
-            Destroy(gameObject);
+            if (spellHolder.spell == null)
+            {
+                spellHolder.spell = spellToSpawn;
+                UiManager.Instance.UpdateSpell(spellToSpawn.spellSprite);
+                Destroy(gameObject);
+            }
         }
     }
 
