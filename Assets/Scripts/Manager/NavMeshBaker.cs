@@ -29,8 +29,4 @@ public class NavMeshBaker : MonoBehaviour
         Debug.Log("baked nav");
     }
 
-    private void Update()
-    {
-        Surface2D.UpdateNavMesh(Surface2D.navMeshData);
-    }
 }
