@@ -16,9 +16,10 @@ public class ArenaManager : MonoBehaviour
     public List<ArenaPair> arenaPairs;
 
     public float spawnInterval = 5f;  // Time interval between spawns
+    public float blinkDuration = 5f;
     public float preSpawnBlinkDuration = 2f;  // Duration of preSpawnableArena blinking
     public float preSpawnBlinkInterval = 2f;  // Duration of preSpawnableArena blinking
-
+    public float timeToHoldArena = 10f;
 
     private GameObject currentSpawnedArena;
     private GameObject lastSpawnedArena;
@@ -72,13 +73,20 @@ public class ArenaManager : MonoBehaviour
             currentSpawnedArena = spawnedArena;
             lastSpawnedArena = spawnedArena;
 
-            // Wait for the specified spawn interval
-            yield return new WaitForSeconds(spawnInterval);
+            // Wait for the specified duration before starting the BlinkArenaWithCollider coroutine
+            yield return new WaitForSeconds(timeToHoldArena);
 
-            // Destroy the preSpawnableArena
-            Destroy(preSpawnableArena);
+            // Blink the spawnedArena for the specified duration while keeping its collider active
+            StartCoroutine(BlinkArenaWithCollider(spawnedArena, blinkDuration));
+
+            // Wait for the specified blink duration
+            yield return new WaitForSeconds(blinkDuration);
+
+            // Destroy the spawnedArena
+            Destroy(spawnedArena);
         }
     }
+
 
     private ArenaPair GetRandomArenaPair()
     {
@@ -114,5 +122,43 @@ public class ArenaManager : MonoBehaviour
 
         // Destroy the preSpawnableArena
         Destroy(preSpawnableArena);
+    }
+
+    private IEnumerator BlinkArenaWithCollider(GameObject arena, float blinkDuration)
+    {
+        float elapsedTime = 0f;
+        bool isBlinking = true;
+
+        // Get all colliders in the arena's children
+        Collider2D[] arenaColliders = arena.GetComponentsInChildren<Collider2D>();
+
+        while (isBlinking)
+        {
+            // Toggle the visibility of the arena
+            arena.SetActive(!arena.activeSelf);
+
+            // Enable or disable colliders on all child objects
+            foreach (Collider2D collider in arenaColliders)
+            {
+                collider.enabled = arena.activeSelf;
+            }
+
+            elapsedTime += Time.deltaTime;
+
+            // Check if the blink duration has elapsed
+            if (elapsedTime >= blinkDuration)
+            {
+                isBlinking = false;
+            }
+
+            // Wait for the next frame
+            yield return null;
+        }
+
+        // Disable colliders on all child objects
+        foreach (Collider2D collider in arenaColliders)
+        {
+            collider.enabled = false;
+        }
     }
 }
