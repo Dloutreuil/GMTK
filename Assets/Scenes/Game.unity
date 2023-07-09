@@ -1677,6 +1677,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491515991}
     m_Modifications:
+    - target: {fileID: 2286206561267492779, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e9b0777912b21e4989131b1e2307627,
+        type: 2}
+    - target: {fileID: 2286206561267492779, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8745548995565308108, guid: 4e9b0777912b21e4989131b1e2307627,
+        type: 2}
+    - target: {fileID: 2810828999045693492, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e9b0777912b21e4989131b1e2307627,
+        type: 2}
+    - target: {fileID: 2810828999045693492, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8745548995565308108, guid: 4e9b0777912b21e4989131b1e2307627,
+        type: 2}
     - target: {fileID: 4013885703639006020, guid: 49136ff22e1a6d2449c3a379ee944042,
         type: 3}
       propertyPath: m_Camera
