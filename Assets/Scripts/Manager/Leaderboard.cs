@@ -38,6 +38,8 @@ public class Leaderboard : MonoBehaviour
     public void StartScoreCoroutine(int score)
     {
         StartCoroutine(SubmitScoreRoutine(score));
+        StartCoroutine(FetchTopHighscoresRoutine);
+
     }
 
     public IEnumerator SubmitScoreRoutine(int scoreToUpload)
