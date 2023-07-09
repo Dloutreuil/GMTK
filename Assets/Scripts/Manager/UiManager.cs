@@ -83,16 +83,16 @@ public class UiManager : MonoBehaviour
 
     public void ShowLoseScreen()
     {
-        currentScore.text = "";
-        currentTime.text = "";
+        /*currentScore.text = "";
+        currentTime.text = "";*/
 
         loseScreen.SetActive(true);
         StopMusic.SetActive(false);
         StartMusic.SetActive(true);
 
-        currentScore.text = "";
+        /*currentScore.text = "";
         currentTime.text = "0";
-        currentTime.text = null;
+        currentTime.text = null;*/
 
     }
 }
