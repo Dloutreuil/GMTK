@@ -694,6 +694,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1464832772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464832774}
+  - component: {fileID: 1464832773}
+  m_Layer: 0
+  m_Name: Arena Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1464832773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464832772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e375cb4e71c4459418cf434cc4fde5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arenaPairs:
+  - spawnableArena: {fileID: 7656919609937960575, guid: 4d81911e56ec0d34588fea225eb68d65,
+      type: 3}
+    preSpawnableArena: {fileID: 7656919609937960575, guid: 3274e5f1289ccc44bb53180d6e20a709,
+      type: 3}
+  - spawnableArena: {fileID: 7656919609937960575, guid: 682f36e201f149b439cd1932ceff39e9,
+      type: 3}
+    preSpawnableArena: {fileID: 7656919609937960575, guid: 03efa86564e01344880e183fa354f8e1,
+      type: 3}
+  - spawnableArena: {fileID: 7656919609937960575, guid: 63598fcc8d676d34a91577d7b7215c0d,
+      type: 3}
+    preSpawnableArena: {fileID: 7656919609937960575, guid: 9b8839961db773c4e9bfdb0ad210dbe2,
+      type: 3}
+  - spawnableArena: {fileID: 7656919609937960575, guid: c0090baf72f6c2d42ab71fdde5f511e7,
+      type: 3}
+    preSpawnableArena: {fileID: 7656919609937960575, guid: 440d6dfd4a5ad984e8c946b6502af44d,
+      type: 3}
+  - spawnableArena: {fileID: 7656919609937960575, guid: be7474ada5522a34cbc1d5cf58d7db02,
+      type: 3}
+    preSpawnableArena: {fileID: 7656919609937960575, guid: 5a5355f9b7a78714183967394a377b1e,
+      type: 3}
+  - spawnableArena: {fileID: 7656919609937960575, guid: c9ab49a176943da4b885d6205c39a47e,
+      type: 3}
+    preSpawnableArena: {fileID: 7656919609937960575, guid: 2b9536a643818254d85d9bc244222503,
+      type: 3}
+  spawnInterval: 30
+  preSpawnBlinkDuration: 5
+  preSpawnBlinkInterval: 0.25
+--- !u!4 &1464832774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464832772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512429455
 GameObject:
   m_ObjectHideFlags: 0

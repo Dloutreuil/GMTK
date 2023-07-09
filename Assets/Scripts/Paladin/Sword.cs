@@ -77,17 +77,20 @@ public class Sword : MonoBehaviour
 
         if (other.CompareTag("SwordWall"))
         {
-            Debug.Log("collided w wall");
-            PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
-            paladinBehaviour.DestroyedByWall();
-            Destroy(gameObject);
+            if (canKill)
+            {
+                Debug.Log("collided w wall");
+                PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
+                paladinBehaviour.DestroyedByWall();
+                Destroy(gameObject);
+            }
         }
     }
 
     private void OnDestroy()
     {
-       // PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
-       // paladinBehaviour.DestroyedByWall();
+        // PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
+        // paladinBehaviour.DestroyedByWall();
     }
 
     public void DestroySword()
