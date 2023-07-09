@@ -122,15 +122,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675639308657732973}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 0.29, z: -3.57}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 13.12, y: 0.29, z: -3.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1675639307678270242}
   m_Father: {fileID: 1675639307515133697}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &1675639308657732976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675639308657732973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 04b228a3b107e564dac08ef9137bf605, type: 2}
   m_CullingMode: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd690997b62ea6d4685769759b88f1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spell: {fileID: 0}
+  spell: {fileID: 11400000, guid: e5d8338178017354b8f27ec243f970b8, type: 2}
   key: 32
 --- !u!95 &8833009318990514379
 Animator:

@@ -46,15 +46,12 @@ public class PaladinMovement : MonoBehaviour
             // Calculate the target position based on the angle and radius
             Vector2 targetPosition = centerPoint + new Vector2(Mathf.Cos(targetAngle), Mathf.Sin(targetAngle)) * radius;
 
-            // Set the Y rotation based on the position in relation to the radius
-            if (targetPosition.x > centerPoint.x)
-            {
-                transform.rotation = Quaternion.Euler(0f, 180f, 0f); // Right side of the radius
-            }
-            else
-            {
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f); // Left side of the radius
-            }
+            // Calculate the rotation angle based on the target position
+            float rotationAngle = Mathf.Atan2(targetPosition.y - centerPoint.y, targetPosition.x - centerPoint.x) * Mathf.Rad2Deg;
+
+            // Set the rotation smoothly
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, rotationAngle);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
             // Move the object to the target position
             transform.position = targetPosition;
