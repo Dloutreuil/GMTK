@@ -35,6 +35,11 @@ public class EnemyManager : MonoBehaviour
             navMeshAgent.enabled = true;
         }
 
+        foreach (Rigidbody2D rbs in rigidbodies)
+        {
+            rbs.bodyType = RigidbodyType2D.Dynamic;
+        }
+
     }
 
 }

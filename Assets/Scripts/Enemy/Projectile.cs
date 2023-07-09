@@ -6,10 +6,12 @@ public class Projectile : MonoBehaviour
 {
     private Vector3 target;
     private bool reachedTarget = false;
+    private float timeElapsed = 0f;
     [SerializeField] private float projectileSpeed = 5f;
     [SerializeField] private int projectileDamage = 5;
     [SerializeField] private bool canMove;
     [SerializeField] private float destroyThreshold = 3f;
+    [SerializeField] private float destroyDelay = 1f;
 
     public void SetTarget(Vector3 target)
     {
@@ -33,6 +35,13 @@ public class Projectile : MonoBehaviour
         {
             // Continue moving in the same direction
             transform.Translate(transform.forward * projectileSpeed * Time.deltaTime, Space.World);
+            timeElapsed += Time.deltaTime;
+
+            // Check if the projectile should be destroyed
+            if (timeElapsed >= destroyDelay)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
