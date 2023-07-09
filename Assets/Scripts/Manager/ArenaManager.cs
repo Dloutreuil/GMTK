@@ -16,7 +16,7 @@ public class ArenaManager : MonoBehaviour
     public List<ArenaPair> arenaPairs;
 
     public float spawnInterval = 5f;  // Time interval between spawns
-    public float blinkDuration = 5f;
+    public float blinkDurationRemoveArena = 5f;
     public float preSpawnBlinkDuration = 2f;  // Duration of preSpawnableArena blinking
     public float preSpawnBlinkInterval = 2f;  // Duration of preSpawnableArena blinking
     public float timeToHoldArena = 10f;
@@ -76,10 +76,10 @@ public class ArenaManager : MonoBehaviour
 
 
             // Blink the spawnedArena for the specified duration while keeping its collider active
-            Coroutine blinkCoroutine = StartCoroutine(BlinkArenaWithCollider(spawnedArena, blinkDuration));
+            Coroutine blinkCoroutine = StartCoroutine(BlinkArenaWithCollider(spawnedArena, blinkDurationRemoveArena));
 
             // Wait for the specified blink duration
-            yield return new WaitForSeconds(blinkDuration);
+            yield return new WaitForSeconds(blinkDurationRemoveArena);
 
             // Stop blinking the spawnedArena
             StopCoroutine(blinkCoroutine);
