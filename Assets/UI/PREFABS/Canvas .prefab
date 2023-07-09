@@ -472,6 +472,7 @@ GameObject:
   - component: {fileID: 4013885703453859081}
   - component: {fileID: 4013885703453859080}
   - component: {fileID: 4013885703453859087}
+  - component: {fileID: 870313184}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -580,7 +581,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4013885703453859080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870313184}
+        m_TargetAssemblyTypeName: MainMenu, Managers
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &870313184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013885703453859085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174062370bc853141b7b95104bd8e72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  credit: {fileID: 0}
 --- !u!1 &4013885703639006041
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +692,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4013885703639006042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,9 +727,10 @@ MonoBehaviour:
   currentSpell: {fileID: 965249321}
   noSpell: {fileID: 0}
   currentHealth: {fileID: 7148667400881279274}
-  health1: {fileID: 0}
-  health2: {fileID: 0}
-  health3: {fileID: 0}
+  health1: {fileID: 21300000, guid: 5d03b0588f967e348a4efe6afe615c06, type: 3}
+  health2: {fileID: 21300000, guid: 4afb75555baaacd439d18a6ec4022ad4, type: 3}
+  health3: {fileID: 21300000, guid: fc0544c4ea3ee8c45b3b025aefd31c4e, type: 3}
+  health0: {fileID: 21300000, guid: 5afa2d5521f4b3346bbb456c2894baa4, type: 3}
   loseScreen: {fileID: 4013885703753201041}
 --- !u!1 &4013885703753201041
 GameObject:
@@ -720,7 +747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4013885703753201042
 RectTransform:
   m_ObjectHideFlags: 0
