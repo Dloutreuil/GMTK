@@ -7,7 +7,8 @@ public class Monster : MonoBehaviour
     public float delayStart = 3f;
     public bool canTakeDamage = true;
     public bool isEnemyFour = false;
-    [HideInInspector] public GameObject enemyToSpawn;
+    public GameObject enemyToSpawn;
+    public GameObject dieVFX;
     public void Kill()
     {
         if (canTakeDamage)
@@ -17,6 +18,8 @@ public class Monster : MonoBehaviour
 
             if (!isEnemyFour)
             {
+                GameObject vfxGO = Instantiate(dieVFX, transform.position, Quaternion.identity,null);
+                Destroy(vfxGO, 10);
                 SpellManager.Instance.DropSpell(transform.position);
                 GameManager.Instance.ChangeScore();
             }

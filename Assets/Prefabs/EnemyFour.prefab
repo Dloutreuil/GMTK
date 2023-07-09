@@ -127,7 +127,9 @@ MonoBehaviour:
   delayStart: 0
   canTakeDamage: 1
   isEnemyFour: 1
-  enemyToSpawn: {fileID: 0}
+  enemyToSpawn: {fileID: 3263248994379755958, guid: 995baf8d98f0ff54cb369d5d1fb1a22d,
+    type: 3}
+  dieVFX: {fileID: 2281839076965299215, guid: e32be0734d9e7b649974a71047122fb3, type: 3}
 --- !u!114 &7744698509613805270
 MonoBehaviour:
   m_ObjectHideFlags: 0

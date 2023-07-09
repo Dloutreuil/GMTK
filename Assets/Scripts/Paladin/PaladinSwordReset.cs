@@ -18,6 +18,7 @@ public class PaladinSwordReset : MonoBehaviour
         {
             Debug.Log("tezst");
             paladinBehaviour.canThrow = true;
+            paladinBehaviour.amountOfSwordThrown = 0;
             Sword sword = other.gameObject.GetComponentInChildren<Sword>();
             sword.DestroySword();
         }

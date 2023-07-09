@@ -82,5 +82,10 @@ public class UiManager : MonoBehaviour
         currentTime.text = "";
 
         loseScreen.SetActive(true);
+
+        currentScore.text = "";
+        currentTime.text = "0";
+        currentTime.text = null;
+
     }
 }
