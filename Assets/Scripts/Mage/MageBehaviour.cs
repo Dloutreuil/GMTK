@@ -53,6 +53,13 @@ public class MageBehaviour : MonoBehaviour
         UiManager.Instance.UpdateHealth(health);
     }
 
+    public void Heal(int heal)
+    {
+        health += heal;
+        UiManager.Instance.UpdateHealth(health);
+    }
+
+
     private IEnumerator BlinkCharacter()
     {
         // Store the initial visibility state of the character

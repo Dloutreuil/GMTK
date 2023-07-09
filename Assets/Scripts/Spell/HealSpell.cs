@@ -10,7 +10,8 @@ public class HealSpell : Spell
     public override void Activate(GameObject parent)
     {
         MageBehaviour mageBehaviour = FindObjectOfType<MageBehaviour>();
-        mageBehaviour.health += healAmount;
+        mageBehaviour.Heal(healAmount);
+
 
         GameObject vfxGO = Instantiate(vfx, parent.transform);
         Destroy(vfxGO, 10);

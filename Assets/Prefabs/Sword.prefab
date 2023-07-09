@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7201986645490488444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6467961785379640602}
   - component: {fileID: 6341221276100818043}
   - component: {fileID: 804210422328842084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,6 +153,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.015577674, y: 0.08178294}
+  m_Size: {x: 1.0311556, y: 2.2258773}
   m_Direction: 0
