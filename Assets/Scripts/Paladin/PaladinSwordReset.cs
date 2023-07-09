@@ -17,12 +17,16 @@ public class PaladinSwordReset : MonoBehaviour
     {
         if (other.CompareTag("Mage"))
         {
-            audiosource.PlayDelayed(1);
-            Debug.Log("tezst");
-            paladinBehaviour.canThrow = true;
-            paladinBehaviour.amountOfSwordThrown = 0;
-            Sword sword = other.gameObject.GetComponentInChildren<Sword>();
-            sword.DestroySword();
+            if (other.gameObject.GetComponentInChildren<Sword>() != null)
+            {
+                audiosource.PlayDelayed(1);
+                Debug.Log("tezst");
+                paladinBehaviour.canThrow = true;
+                paladinBehaviour.amountOfSwordThrown = 0;
+                Sword sword = other.gameObject.GetComponentInChildren<Sword>();
+                sword.DestroySword();
+            }
+            
         }
     }
 

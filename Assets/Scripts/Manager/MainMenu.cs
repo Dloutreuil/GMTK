@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGame()
     {
-        Leaderboard.Instance.holder.SetActive(false);
+        //Leaderboard.Instance.holder.SetActive(false);
         SceneManager.LoadScene("Game");
     }
     public void QuitGame()
@@ -36,10 +36,11 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
-        Leaderboard.Instance.holder.active = true;
+        //Leaderboard.Instance.holder.active = true;
         SceneManager.LoadScene("MM");
 
     }

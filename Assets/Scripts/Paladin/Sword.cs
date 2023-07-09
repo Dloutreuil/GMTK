@@ -7,7 +7,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private float closeDistanceThreshold = 0.5f; // Threshold to consider the sword close to the target
     [HideInInspector] public float swordSpeed = 5f;
     [SerializeField] private bool canMove = true;
-    [SerializeField] private bool canKill = true;
+    [SerializeField] public bool canKill = true;
     [HideInInspector] public bool moveTowardsMage = false;
     [HideInInspector] public bool isGrabbed = false;
     [HideInInspector] public bool rotateAroundMage = false;
@@ -93,6 +93,11 @@ public class Sword : MonoBehaviour
             // Update the current angle
             currentAngle = targetAngle;
         }
+
+        if (isGrabbed)
+        {
+            canKill = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -136,9 +141,11 @@ public class Sword : MonoBehaviour
             if (canKill)
             {
                 Debug.Log("collided w wall");
-                PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
+                canKill = false;
+                canMove = false;
+                /*PaladinBehaviour paladinBehaviour = FindObjectOfType<PaladinBehaviour>();
                 paladinBehaviour.DestroyedByWall();
-                Destroy(gameObject);
+                Destroy(gameObject);*/
             }
         }
     }

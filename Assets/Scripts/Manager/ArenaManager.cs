@@ -34,6 +34,7 @@ public class ArenaManager : MonoBehaviour
 
     private IEnumerator SpawnArenas()
     {
+        yield return new WaitForSeconds(spawnInterval);
         while (true)
         {
             // Select a random arena to spawn
@@ -92,7 +93,7 @@ public class ArenaManager : MonoBehaviour
             // Destroy the preSpawnableArena
             Destroy(preSpawnableArena);
 
-            yield return new WaitForSeconds(spawnInterval);
+            
         }
     }
 
@@ -163,7 +164,7 @@ public class ArenaManager : MonoBehaviour
             }
 
             // Wait for the next frame
-            yield return null;
+            yield return new WaitForSeconds(preSpawnBlinkInterval);
         }
 
         // Disable PolygonCollider2D components on all child objects

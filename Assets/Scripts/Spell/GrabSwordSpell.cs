@@ -30,6 +30,7 @@ public class GrabSwordSpell : Spell
 
             sword.moveTowardsMage = true;
             sword.swordSpeed = attractionForce;
+            
         }
 
         /*Debug.Log("grab");

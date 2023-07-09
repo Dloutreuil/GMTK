@@ -18,7 +18,7 @@ public class EnemyPrefab
 public class EnemySpawner : MonoBehaviour
 {
     public EnemyPrefab[] enemyPrefabs;
-    public float spawnerCooldown = 5f;
+    public float spawnerCooldown;
 
     private NavMeshSurface navMeshSurface;
     private float currentSpawnerCooldown;
