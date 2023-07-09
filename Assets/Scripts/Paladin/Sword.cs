@@ -3,6 +3,7 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     private Vector3 target;
+    public Sprite floatingSword;
     [SerializeField] private float closeDistanceThreshold = 0.5f; // Threshold to consider the sword close to the target
     [HideInInspector] public float swordSpeed = 5f;
     [SerializeField] private bool canMove = true;
@@ -117,6 +118,9 @@ public class Sword : MonoBehaviour
             rotateAroundMage = true;
             MageMovement mageMovement = other.GetComponent<MageMovement>();
             transform.SetParent(mageMovement.transform);
+
+            SpriteRenderer spriterend = GetComponent<SpriteRenderer>();
+            spriterend.sprite = floatingSword;
         }
 
 

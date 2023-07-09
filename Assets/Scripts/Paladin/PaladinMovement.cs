@@ -49,7 +49,7 @@ public class PaladinMovement : MonoBehaviour
             // Set the Y rotation based on the position in relation to the radius
             if (targetPosition.x > centerPoint.x)
             {
-                transform.rotation = Quaternion.Euler(0f, 180f, 0f); // Right side of the radius
+                transform.rotation = Quaternion.Euler(0f, 0f, 180f); // Right side of the radius
             }
             else
             {
