@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class UiManager : MonoBehaviour
 {
     private static UiManager instance;
     public static UiManager Instance { get { return instance; } }
 
-    public int currentScore;
-    public int currentTime;
+    public TextMeshProUGUI currentScore;
+    public TextMeshProUGUI currentTime;
 
     public int currentHealth; //change to slider
 
-    public Sprite currentSpell;
+    public SpriteRenderer currentSpell;
     public Sprite noSpell;
 
     public GameObject loseScreen;
@@ -29,14 +29,19 @@ public class UiManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        NoSpell();
+    }
+
     public void UpdateScore(int newScore)
     {
-        currentScore = newScore;
+        currentScore.text = newScore.ToString();
     }
 
     public void UpdateTime(int newTime)
     {
-        currentScore = newTime;
+        currentTime.text = newTime.ToString();
     }
 
     public void UpdateHealth(int health)
@@ -46,12 +51,12 @@ public class UiManager : MonoBehaviour
 
     public void UpdateSpell(Sprite newSpell)
     {
-        currentSpell = newSpell;
+        currentSpell.sprite = newSpell;
     }
 
     public void NoSpell()
     {
-        currentSpell = noSpell;
+        currentSpell.sprite = noSpell;
     }
 
     public void ShowLoseScreen()

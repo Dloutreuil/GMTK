@@ -24,8 +24,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        elapsedTime = (int)Time.deltaTime;
-        UiManager.Instance.UpdateTime(elapsedTime);
+        StartCoroutine(UpdateTime());
+    }
+
+    private IEnumerator UpdateTime()
+    {
+        while (true)
+        {
+            elapsedTime = Mathf.FloorToInt(Time.time);
+            UiManager.Instance.UpdateTime(elapsedTime);
+
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     public void ChangeScore()

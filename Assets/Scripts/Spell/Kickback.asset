@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kickback
   m_EditorClassIdentifier: 
   name: Kickback
-  spellSprite: {fileID: 0}
+  spellSprite: {fileID: 21300000, guid: eb33857450790b24c9ab171674c7ae2b, type: 3}
   vfx: {fileID: 7504845149228635875, guid: dc7e571a3cdf8074382f74fedbb4b55e, type: 3}
   cooldownTime: 0
   activeTime: 1

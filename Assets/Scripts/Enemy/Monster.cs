@@ -18,6 +18,7 @@ public class Monster : MonoBehaviour
             if (!isEnemyFour)
             {
                 SpellManager.Instance.DropSpell(transform.position);
+                GameManager.Instance.ChangeScore();
             }
         }
         if (isEnemyFour)
