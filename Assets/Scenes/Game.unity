@@ -1555,6 +1555,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1675639308657732977, guid: 5bef497e65200974f998d8d042e531a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bef497e65200974f998d8d042e531a9, type: 3}
 --- !u!1001 &3263248995056696748
