@@ -40,24 +40,27 @@ public class PaladinMovement : MonoBehaviour
         // Move only if the object is flagged to move
         if (isMoving)
         {
-            // Calculate the target angle based on the current time and speed
-            float targetAngle = currentAngle + (isClockwise ? -1f : 1f) * rotationSpeed * Time.deltaTime;
+            if (isMoving)
+            {
+                // Calculate the target angle based on the current time and speed
+                float targetAngle = currentAngle + (isClockwise ? -1f : 1f) * rotationSpeed * Time.deltaTime;
 
-            // Calculate the target position based on the angle and radius
-            Vector2 targetPosition = centerPoint + new Vector2(Mathf.Cos(targetAngle), Mathf.Sin(targetAngle)) * radius;
+                // Calculate the target position based on the angle and radius
+                Vector2 targetPosition = centerPoint + new Vector2(Mathf.Cos(targetAngle), Mathf.Sin(targetAngle)) * radius;
 
-            // Calculate the rotation angle based on the target position
-            float rotationAngle = Mathf.Atan2(targetPosition.y - centerPoint.y, targetPosition.x - centerPoint.x) * Mathf.Rad2Deg;
+                // Calculate the rotation angle based on the position in relation to the radius
+                float rotationAngle = Mathf.Atan2(targetPosition.y - centerPoint.y, targetPosition.x - centerPoint.x) * Mathf.Rad2Deg;
 
-            // Set the rotation smoothly
-            Quaternion targetRotation = Quaternion.Euler(0f, 0f, rotationAngle);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                // Smoothly rotate the object towards the target rotation angle
+                Quaternion targetRotation = Quaternion.Euler(0f, 0f, rotationAngle);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            // Move the object to the target position
-            transform.position = targetPosition;
+                // Move the object to the target position
+                transform.position = targetPosition;
 
-            // Update the current angle
-            currentAngle = targetAngle;
+                // Update the current angle
+                currentAngle = targetAngle;
+            }
         }
     }
 }
