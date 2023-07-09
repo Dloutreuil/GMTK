@@ -416,7 +416,7 @@ MonoBehaviour:
     cooldown: 6
     lastSpawnTime: 0
     isSpawning: 0
-  spawnerCooldown: 3
+  spawnerCooldown: 2
   spawnPreview: {fileID: 4364871994237146654, guid: 72ca723525011a745b11b212de9a9027,
     type: 3}
 --- !u!114 &86508484
