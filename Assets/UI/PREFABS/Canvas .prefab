@@ -727,8 +727,8 @@ MonoBehaviour:
   currentSpell: {fileID: 965249321}
   noSpell: {fileID: 0}
   currentHealth: {fileID: 7148667400881279274}
-  health1: {fileID: 21300000, guid: 5d03b0588f967e348a4efe6afe615c06, type: 3}
-  health2: {fileID: 21300000, guid: 4afb75555baaacd439d18a6ec4022ad4, type: 3}
+  health1: {fileID: 21300000, guid: 4afb75555baaacd439d18a6ec4022ad4, type: 3}
+  health2: {fileID: 21300000, guid: 5d03b0588f967e348a4efe6afe615c06, type: 3}
   health3: {fileID: 21300000, guid: fc0544c4ea3ee8c45b3b025aefd31c4e, type: 3}
   health0: {fileID: 21300000, guid: 5afa2d5521f4b3346bbb456c2894baa4, type: 3}
   loseScreen: {fileID: 4013885703753201041}
