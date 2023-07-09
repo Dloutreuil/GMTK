@@ -6,28 +6,30 @@ using UnityEngine;
 
 public class GrabSwordSpell : Spell
 {
-    public GameObject target;
     public float attractionForce = 10;
     public override void Activate(GameObject parent)
     {
-        target = FindAnyObjectByType<MageMovement>().gameObject;
-        Debug.Log(target.name);
         Debug.Log("grab");
         Sword sword = FindObjectOfType<Sword>();
-        Rigidbody2D parentRigidbody = sword.GetComponent<Rigidbody2D>();
+        //Rigidbody2D parentRigidbody = sword.GetComponent<Rigidbody2D>();
 
         if (!sword.isGrabbed)
         {
-            if (parentRigidbody != null && target != null)
-            {
-                Vector2 attractionDirection = target.transform.position - sword.transform.position;
-                parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
-            }
+            //if (parentRigidbody != null)
+            //{
+            Vector2 attractionDirection = parent.transform.position - sword.transform.position;
+            //parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
+
+            // Calculate the angle based on the parent's direction
+            float angle = Mathf.Atan2(attractionDirection.y, attractionDirection.x) * Mathf.Rad2Deg;
+
+            GameObject vfxGO = Instantiate(vfx, sword.transform.position, Quaternion.Euler(0f, 0f, angle));
+            Destroy(vfxGO, 10);
+            Debug.Log("vfx");
+            // }
+
             sword.moveTowardsMage = true;
             sword.swordSpeed = attractionForce;
-
-            GameObject vfxGO = Instantiate(vfx, parent.transform);
-            Destroy(vfxGO, 10);
         }
 
         /*Debug.Log("grab");
