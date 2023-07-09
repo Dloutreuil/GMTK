@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 749044266507339258}
   - component: {fileID: 8469491327758901023}
+  - component: {fileID: 5560611673211077646}
   m_Layer: 6
   m_Name: GMTK_Arena
   m_TagString: Untagged
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5560611673211077646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2531108464185618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &200156989452476039
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +112,7 @@ GameObject:
   - component: {fileID: 3801164610955050100}
   - component: {fileID: 4211480334820903586}
   - component: {fileID: 2114812666617049556}
+  - component: {fileID: 2098217720000078145}
   m_Layer: 6
   m_Name: GMTK wall
   m_TagString: Untagged
@@ -198,6 +216,22 @@ PolygonCollider2D:
       - {x: -0.25, y: -3.1999998}
       - {x: 0.25, y: -3.1999998}
       - {x: 0.25, y: 3.1999998}
+--- !u!114 &2098217720000078145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200156989452476039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &673856152136401468
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +243,7 @@ GameObject:
   - component: {fileID: 6292426105990321983}
   - component: {fileID: 4599628451606057168}
   - component: {fileID: 257904422627429441}
+  - component: {fileID: 5846313094078446486}
   m_Layer: 6
   m_Name: GMTK wall (1)
   m_TagString: Untagged
@@ -312,6 +347,22 @@ PolygonCollider2D:
       - {x: -0.25, y: -3.1999998}
       - {x: 0.25, y: -3.1999998}
       - {x: 0.25, y: 3.1999998}
+--- !u!114 &5846313094078446486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673856152136401468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &6475702610556668490
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +374,7 @@ GameObject:
   - component: {fileID: 8275308935087664128}
   - component: {fileID: 7059537033532611432}
   - component: {fileID: 825222524839314792}
+  - component: {fileID: 2272285996889493119}
   m_Layer: 6
   m_Name: GMTK wall (3)
   m_TagString: Untagged
@@ -426,6 +478,22 @@ PolygonCollider2D:
       - {x: -0.25, y: -3.1999998}
       - {x: 0.25, y: -3.1999998}
       - {x: 0.25, y: 3.1999998}
+--- !u!114 &2272285996889493119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475702610556668490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7656919609937960575
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +541,7 @@ GameObject:
   - component: {fileID: 3982926216512745057}
   - component: {fileID: 2951826280620555519}
   - component: {fileID: 8046832746176426383}
+  - component: {fileID: 6763334985251275078}
   m_Layer: 6
   m_Name: GMTK wall (2)
   m_TagString: Untagged
@@ -576,3 +645,19 @@ PolygonCollider2D:
       - {x: -0.25, y: -3.1999998}
       - {x: 0.25, y: -3.1999998}
       - {x: 0.25, y: 3.1999998}
+--- !u!114 &6763334985251275078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338632216659145399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2695812744888633907}
   - component: {fileID: 9087754345200835302}
   - component: {fileID: 8593091029887126877}
+  - component: {fileID: 315376132941585356}
   m_Layer: 6
   m_Name: GMTK Border (1)
   m_TagString: Untagged
@@ -281,6 +282,22 @@ PolygonCollider2D:
       - {x: 5.5499997, y: -1.15}
       - {x: 5.5499997, y: -1.05}
       - {x: 5.49, y: -0.97999996}
+--- !u!114 &315376132941585356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920829314786498535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &5894891054200845683
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +309,7 @@ GameObject:
   - component: {fileID: 8992633238111147960}
   - component: {fileID: 6914374690166756037}
   - component: {fileID: 2539610305338479606}
+  - component: {fileID: 3930721926570825534}
   m_Layer: 6
   m_Name: GMTK Border
   m_TagString: Untagged
@@ -478,6 +496,22 @@ PolygonCollider2D:
       - {x: 5.5499997, y: -1.15}
       - {x: 5.5499997, y: -1.05}
       - {x: 5.49, y: -0.97999996}
+--- !u!114 &3930721926570825534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894891054200845683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &6655052725109137817
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +523,7 @@ GameObject:
   - component: {fileID: 726631781955243760}
   - component: {fileID: 8815467005272563378}
   - component: {fileID: 2377302268622956699}
+  - component: {fileID: 6167498553124444394}
   m_Layer: 6
   m_Name: GMTK Border (2)
   m_TagString: Untagged
@@ -675,6 +710,22 @@ PolygonCollider2D:
       - {x: 5.5499997, y: -1.15}
       - {x: 5.5499997, y: -1.05}
       - {x: 5.49, y: -0.97999996}
+--- !u!114 &6167498553124444394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655052725109137817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7656919609937960575
 GameObject:
   m_ObjectHideFlags: 0

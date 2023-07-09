@@ -23,6 +23,7 @@ public class ArenaManager : MonoBehaviour
 
     private GameObject currentSpawnedArena;
     private GameObject lastSpawnedArena;
+    public GameObject grid;
     private Coroutine spawnCoroutine;
 
     private void Start()
@@ -53,7 +54,7 @@ public class ArenaManager : MonoBehaviour
             }
 
             // Instantiate the preSpawnableArena
-            GameObject preSpawnableArena = Instantiate(arenaPairToSpawn.preSpawnableArena, transform.position, Quaternion.identity);
+            GameObject preSpawnableArena = Instantiate(arenaPairToSpawn.preSpawnableArena, transform.position, Quaternion.identity, grid.transform);
 
             // Start blinking the preSpawnableArena
             Coroutine preSpawnBlinkCoroutine = StartCoroutine(BlinkPreSpawnableArena(preSpawnableArena));
@@ -66,12 +67,13 @@ public class ArenaManager : MonoBehaviour
             preSpawnableArena.SetActive(false);
 
             // Instantiate the spawnableArena
-            GameObject spawnedArena = Instantiate(arenaPairToSpawn.spawnableArena, transform.position, Quaternion.identity);
+            GameObject spawnedArena = Instantiate(arenaPairToSpawn.spawnableArena, transform.position, Quaternion.identity, grid.transform);
 
             // Update the current and last spawned arenas
             currentSpawnedArena = spawnedArena;
             lastSpawnedArena = spawnedArena;
 
+            NavMeshBaker.Instance.BakeNavMesh();
             yield return new WaitForSeconds(timeToHoldArena);
 
 
