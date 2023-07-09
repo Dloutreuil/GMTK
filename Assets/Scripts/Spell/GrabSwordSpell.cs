@@ -21,9 +21,9 @@ public class GrabSwordSpell : Spell
             //parentRigidbody.velocity = attractionDirection.normalized * attractionForce;
 
             // Calculate the angle based on the parent's direction
-            float angle = Mathf.Atan2(attractionDirection.y, attractionDirection.x) * Mathf.Rad2Deg;
+           // float angle = Mathf.Atan2(attractionDirection.y, attractionDirection.x) * Mathf.Rad2Deg;
 
-            GameObject vfxGO = Instantiate(vfx, sword.transform.position, Quaternion.Euler(0f, 0f, angle));
+            GameObject vfxGO = Instantiate(vfx, sword.transform.position, Quaternion.Euler(0f, 0f,0));
             Destroy(vfxGO, 10);
             Debug.Log("vfx");
             // }

@@ -136,6 +136,9 @@ MonoBehaviour:
   canKill: 1
   moveTowardsMage: 0
   isGrabbed: 0
+  rotateAroundMage: 1
+  radius: 1
+  rotationSpeed: 2
 --- !u!70 &804210422328842084
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
