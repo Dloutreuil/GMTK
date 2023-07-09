@@ -45,6 +45,7 @@ public class SpellHolder : MonoBehaviour
                         state = SpellState.cooldown;
                         cooldownTime = spell.cooldownTime;
                         spell = null;
+                        UiManager.Instance.NoSpell();
                     }
                     break;
 
