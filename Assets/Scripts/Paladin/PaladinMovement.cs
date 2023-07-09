@@ -5,6 +5,7 @@ public class PaladinMovement : MonoBehaviour
     public float radius = 5f; // Radius of the circular motion
     public float rotationSpeed = 2f; // Speed of the rotation
 
+    public GameObject centrePoint;
     private Vector2 centerPoint; // Center point of the circular motion
     private bool isMoving = false; // Flag to indicate if the object is moving
     private bool isClockwise = false; // Flag to indicate the movement direction
@@ -13,7 +14,7 @@ public class PaladinMovement : MonoBehaviour
 
     private void Start()
     {
-        centerPoint = transform.position; // Set the initial center point to the object's position
+        centerPoint = centrePoint.transform.position; // Set the initial center point to the object's position
     }
 
     private void Update()

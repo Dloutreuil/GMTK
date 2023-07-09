@@ -16,7 +16,11 @@ public class DashSpell : Spell
 
         Debug.Log("dashed");
 
-        GameObject vfxGO = Instantiate(vfx, parent.transform);
+
+        // Calculate the angle based on the player's direction
+        float angle = Mathf.Atan2(mageMovement.movement.y, mageMovement.movement.x) * Mathf.Rad2Deg;
+
+        GameObject vfxGO = Instantiate(vfx, parent.transform.position, Quaternion.Euler(0f, 0f, angle));
         Destroy(vfxGO, 10);
     }
     public override void BeginCooldown(GameObject parent)

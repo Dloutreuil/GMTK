@@ -12,6 +12,7 @@ public class PaladinBehaviour : MonoBehaviour
     private float nextInstantiationTime = 0f;
 
     [SerializeField] public float amountOfSwordThrown = 0;
+
     private void Update()
     {
         if (canThrow && amountOfSwordThrown < 1)
@@ -24,8 +25,6 @@ public class PaladinBehaviour : MonoBehaviour
                 nextInstantiationTime = 0;
             }
         }
-        
-
     }
 
     private IEnumerator InstantiateSwordTowardsTarget()
@@ -33,7 +32,7 @@ public class PaladinBehaviour : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
-        GameObject sword = Instantiate(swordPrefab, transform.position, swordPrefab.transform.rotation);
+        GameObject sword = Instantiate(swordPrefab, transform.position, rotation); // Use the calculated rotation for instantiation
         Sword swordScript = sword.GetComponent<Sword>();
         if (swordScript != null)
         {
