@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         UiManager.Instance.UpdateScore(killCount);
 
         // Calculate score based on enemiesKilled and timeAlive
-        score = killCount * 20 + (int)timeAlive;
+        score = killCount * 20 + (int)elapsedTime;
     }
 
 
