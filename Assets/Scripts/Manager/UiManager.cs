@@ -18,6 +18,7 @@ public class UiManager : MonoBehaviour
     public Sprite health1;
     public Sprite health2;
     public Sprite health3;
+    public Sprite health0;
 
 
     public GameObject loseScreen;
@@ -53,6 +54,9 @@ public class UiManager : MonoBehaviour
     {
         switch (health)
         {
+            case 0:
+                currentHealth.sprite = health0;
+                break;
             case 1:
                 currentHealth.sprite = health1;
                 break;
