@@ -23,7 +23,7 @@ public class GrabSwordSpell : Spell
             // Calculate the angle based on the parent's direction
            // float angle = Mathf.Atan2(attractionDirection.y, attractionDirection.x) * Mathf.Rad2Deg;
 
-            GameObject vfxGO = Instantiate(vfx, sword.transform.position, Quaternion.Euler(0f, 0f,0));
+            GameObject vfxGO = Instantiate(vfx, parent.transform.position, Quaternion.Euler(0f, 0f,0));
             Destroy(vfxGO, 10);
             Debug.Log("vfx");
             // }
