@@ -64,9 +64,8 @@ public class GameManager : MonoBehaviour
 
     public void GameLost()
     {
-        //ChangeScore();
-        Debug.Log("AAAAAAAAAA");
-        //Leaderboard.Instance.StartScoreCoroutine(score);
+        ChangeScore();
+        Leaderboard.Instance.StartScoreCoroutine(score);
         Time.timeScale = 0;
         UiManager.Instance.ShowLoseScreen();
     }
