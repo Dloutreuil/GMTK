@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
 
     public int killCount;
-    public int elapsedTime;
+    public int elapsedTime = 0;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -21,17 +21,24 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    private void Start()
+    {
+        elapsedTime = 0;
+    }
+
 
     private void Update()
     {
         StartCoroutine(UpdateTime());
     }
 
+
+
     private IEnumerator UpdateTime()
     {
         while (true)
         {
-            elapsedTime = Mathf.FloorToInt(Time.time);
+            elapsedTime = Mathf.FloorToInt(Time.timeSinceLevelLoad) ;
             UiManager.Instance.UpdateTime(elapsedTime);
 
             yield return new WaitForSeconds(1f);

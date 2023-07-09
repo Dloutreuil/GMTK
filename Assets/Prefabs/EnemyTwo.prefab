@@ -108,6 +108,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 193181414042425130}
   instantiationDelay: 3
   movementRadius: 5
+  positionCheckInterval: 3
 --- !u!195 &193181414042425130
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -146,6 +147,7 @@ MonoBehaviour:
   canTakeDamage: 1
   isEnemyFour: 0
   enemyToSpawn: {fileID: 0}
+  dieVFX: {fileID: 2281839076965299215, guid: e32be0734d9e7b649974a71047122fb3, type: 3}
 --- !u!50 &1739336023
 Rigidbody2D:
   serializedVersion: 4

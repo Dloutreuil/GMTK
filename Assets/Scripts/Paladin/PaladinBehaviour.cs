@@ -14,7 +14,7 @@ public class PaladinBehaviour : MonoBehaviour
     [SerializeField] public float amountOfSwordThrown = 0;
     private void Update()
     {
-        if (canThrow)
+        if (canThrow && amountOfSwordThrown < 1)
         {
             nextInstantiationTime += Time.deltaTime;
 
