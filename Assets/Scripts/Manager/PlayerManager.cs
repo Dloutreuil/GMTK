@@ -8,7 +8,9 @@ public class PlayerManager : MonoBehaviour
 {
     public Leaderboard leaderboard;
     public TMP_InputField playerNameInputfield;
+
     // Start is called before the first frame update
+    [System.Obsolete]
     void Start()
     {
         StartCoroutine(SetupRoutine());
@@ -29,6 +31,7 @@ public class PlayerManager : MonoBehaviour
         });
     }
 
+    [System.Obsolete]
     IEnumerator SetupRoutine()
     {
         yield return LoginRoutine();
