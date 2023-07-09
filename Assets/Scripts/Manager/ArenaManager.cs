@@ -67,7 +67,7 @@ public class ArenaManager : MonoBehaviour
             preSpawnableArena.SetActive(false);
 
             // Instantiate the spawnableArena
-            GameObject spawnedArena = Instantiate(arenaPairToSpawn.spawnableArena, new Vector3(transform.position.x, transform.position.y, transform.position.z + -1.85f), Quaternion.identity, grid.transform);
+            GameObject spawnedArena = Instantiate(arenaPairToSpawn.spawnableArena, transform.position, Quaternion.identity, grid.transform);
 
             // Update the current and last spawned arenas
             currentSpawnedArena = spawnedArena;

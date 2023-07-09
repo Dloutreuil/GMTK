@@ -126,6 +126,8 @@ public class Sword : MonoBehaviour
 
         if (other.CompareTag("SwordWall"))
         {
+            Debug.Log("collided w wall");
+
             if (canKill)
             {
                 Debug.Log("collided w wall");
