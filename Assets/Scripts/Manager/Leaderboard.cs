@@ -13,6 +13,8 @@ public class Leaderboard : MonoBehaviour
     private static Leaderboard instance;
     public static Leaderboard Instance { get { return instance; } }
 
+
+    public GameObject holder;
     // Start is called before the first frame update
 
     private void Awake()

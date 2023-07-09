@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
-
+        Leaderboard.Instance.holder.active = true;
         SceneManager.LoadScene("MM");
 
     }
