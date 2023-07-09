@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGame()
     {
+        Leaderboard.Instance.holder.SetActive(false);
         SceneManager.LoadScene("Game");
     }
     public void QuitGame()
