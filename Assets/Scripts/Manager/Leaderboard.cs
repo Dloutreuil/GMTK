@@ -35,13 +35,15 @@ public class Leaderboard : MonoBehaviour
 
     }
 
+    [System.Obsolete]
     public void StartScoreCoroutine(int score)
     {
         StartCoroutine(SubmitScoreRoutine(score));
-        StartCoroutine(FetchTopHighscoresRoutine);
+        StartCoroutine(FetchTopHighscoresRoutine());
 
     }
 
+    [System.Obsolete]
     public IEnumerator SubmitScoreRoutine(int scoreToUpload)
     {
         bool done = false;
@@ -62,6 +64,7 @@ public class Leaderboard : MonoBehaviour
         yield return new WaitWhile(() => done == false);
     }
 
+    [System.Obsolete]
     public IEnumerator FetchTopHighscoresRoutine()
     {
         bool done = false;
