@@ -1021,6 +1021,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4013885701849516916}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1720281529 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7148667400881279274, guid: 49136ff22e1a6d2449c3a379ee944042,
+    type: 3}
+  m_PrefabInstance: {fileID: 4013885701849516916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1739336018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 193181414042425133, guid: ef3e7f8a69c708a4380bea66ab4033e1,
@@ -1676,6 +1682,11 @@ PrefabInstance:
       propertyPath: currentScore
       value: 
       objectReference: {fileID: 158277601}
+    - target: {fileID: 3089644032328808599, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: currentHealth
+      value: 
+      objectReference: {fileID: 1720281529}
     - target: {fileID: 4013885703639006020, guid: 49136ff22e1a6d2449c3a379ee944042,
         type: 3}
       propertyPath: m_Camera
@@ -1805,6 +1816,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030714907356803458, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030714907356803458, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030714907356803458, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030714907356803458, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030714907356803458, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030714907356803458, guid: 49136ff22e1a6d2449c3a379ee944042,
+        type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49136ff22e1a6d2449c3a379ee944042, type: 3}

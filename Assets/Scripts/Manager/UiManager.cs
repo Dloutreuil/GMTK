@@ -10,10 +10,15 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI currentScore;
     public TextMeshProUGUI currentTime;
 
-    public int currentHealth; //change to slider
-
     public SpriteRenderer currentSpell;
-    public Sprite noSpell;
+    [HideInInspector] public Sprite noSpell;
+
+    public SpriteRenderer currentHealth;
+
+    public Sprite health1;
+    public Sprite health2;
+    public Sprite health3;
+
 
     public GameObject loseScreen;
     private void Awake()
@@ -46,7 +51,19 @@ public class UiManager : MonoBehaviour
 
     public void UpdateHealth(int health)
     {
-        currentHealth = health;
+        switch (health)
+        {
+            case 1:
+                currentHealth.sprite = health1;
+                break;
+            case 2:
+                currentHealth.sprite = health2;
+
+                break;
+            case 3:
+                currentHealth.sprite = health3;
+                break;
+        }
     }
 
     public void UpdateSpell(Sprite newSpell)
@@ -61,6 +78,9 @@ public class UiManager : MonoBehaviour
 
     public void ShowLoseScreen()
     {
+        currentScore.text = "";
+        currentTime.text = "";
+
         loseScreen.SetActive(true);
     }
 }

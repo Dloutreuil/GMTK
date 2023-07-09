@@ -13,6 +13,7 @@ public class MageBehaviour : MonoBehaviour
     private void Start()
     {
         characterRenderer = GetComponent<Renderer>();
+        UiManager.Instance.UpdateHealth(health);
     }
 
     private void Update()
