@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 315376132941585356}
   m_Layer: 6
   m_Name: GMTK Border (1)
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 3930721926570825534}
   m_Layer: 6
   m_Name: GMTK Border
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 6167498553124444394}
   m_Layer: 6
   m_Name: GMTK Border (2)
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

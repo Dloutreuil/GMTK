@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 4211480334820903586}
   - component: {fileID: 3328359508145345362}
   - component: {fileID: 7252425674059708072}
+  - component: {fileID: 1930605018609407877}
   m_Layer: 6
   m_Name: GMTK wall
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -215,6 +216,35 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!60 &1930605018609407877
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200156989452476039}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 6.4}
+    newSize: {x: 0.5, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}
 --- !u!1 &4336743050135729547
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,9 +257,10 @@ GameObject:
   - component: {fileID: 5594936842183263992}
   - component: {fileID: 1644446701402412100}
   - component: {fileID: 3191986616115453583}
+  - component: {fileID: 5791128135815620065}
   m_Layer: 6
   m_Name: GMTK wall (1)
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -346,6 +377,35 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!60 &5791128135815620065
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336743050135729547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 6.4}
+    newSize: {x: 0.5, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}
 --- !u!1 &7656919609937960575
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,9 +453,10 @@ GameObject:
   - component: {fileID: 133186848545539250}
   - component: {fileID: 6527639125698747312}
   - component: {fileID: 1686078675057833709}
+  - component: {fileID: 1517738650620234394}
   m_Layer: 6
   m_Name: GMTK wall (2)
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -512,3 +573,32 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!60 &1517738650620234394
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410221330282486689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 6.4}
+    newSize: {x: 0.5, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}

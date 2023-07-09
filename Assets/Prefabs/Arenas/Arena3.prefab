@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 4211480334820903586}
   - component: {fileID: 7099043166395610952}
   - component: {fileID: 6905134146516058094}
+  - component: {fileID: 5088261042898120268}
   m_Layer: 6
   m_Name: GMTK wall
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -215,6 +216,35 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!60 &5088261042898120268
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200156989452476039}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 6.4}
+    newSize: {x: 0.5, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}
 --- !u!1 &4234930364630228212
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,9 +257,10 @@ GameObject:
   - component: {fileID: 5301218929744308285}
   - component: {fileID: 8191172944599207381}
   - component: {fileID: 2451763922148350557}
+  - component: {fileID: 1564062926297126065}
   m_Layer: 6
   m_Name: GMTK wall (1)
-  m_TagString: Untagged
+  m_TagString: SwordWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -346,6 +377,35 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!60 &1564062926297126065
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4234930364630228212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 6.4}
+    newSize: {x: 0.5, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 3.1999998}
+      - {x: -0.25, y: -3.1999998}
+      - {x: 0.25, y: -3.1999998}
+      - {x: 0.25, y: 3.1999998}
 --- !u!1 &7656919609937960575
 GameObject:
   m_ObjectHideFlags: 0
