@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject Player;
     public GameObject credit;
 
     private void Start()
@@ -24,12 +26,15 @@ public class MainMenu : MonoBehaviour
     public void ShowCredit()
     {
         credit.SetActive(true);
+        Player.SetActive(false);
     }
     public void QuitCredit()
     {
         if(credit != null)
         {
             credit.SetActive(false);
+            Player.SetActive(true);
+
 
         }
     }
